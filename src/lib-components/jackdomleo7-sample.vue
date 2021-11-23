@@ -72,17 +72,18 @@ export default /*#__PURE__*/defineComponent({
   </div>
 </template>
 
-<style scoped>
-  .jackdomleo7-sample {
-    display: block;
-    width: 400px;
-    margin: 25px auto;
-    border: 1px solid #ccc;
-    background: #eaeaea;
-    text-align: center;
-    padding: 25px;
-  }
-  .jackdomleo7-sample p {
+<style lang="scss" scoped>
+.jackdomleo7-sample {
+  display: block;
+  width: 400px;
+  margin: 25px auto;
+  border: 1px solid #ccc;
+  background: #eaeaea;
+  text-align: center;
+  padding: 25px;
+
+  p {
     margin: 0 0 1em;
   }
+}
 </style>

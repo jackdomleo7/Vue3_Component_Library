@@ -2,6 +2,7 @@
 
 A Vue3 component library for my own enjoyment <small>(feel free to use but use at your own risk, this is fully typed and thoroughly tested but was never intended to be used for commercial use)</small>.
 
+[![Pipeline](https://github.com/jackdomleo7/Vue3_Component_Library/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/jackdomleo7/Vue3_Component_Library/actions/workflows/pipeline.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/jackdomleo7/vue3_component_library/badge)](https://www.codefactor.io/repository/github/jackdomleo7/vue3_component_library)
 
 ## Tech Stack

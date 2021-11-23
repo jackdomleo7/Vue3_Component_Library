@@ -23,6 +23,7 @@
     "dist/*",
     "src/**/*.vue"
   ],
+  "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
     "prebuild": "rimraf ./dist",
@@ -53,6 +54,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.0",
     "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^10.2.0",
     "ttypescript": "^1.5.12",
     "typescript": "^4.5.2",
     "vue": "^3.2.22"

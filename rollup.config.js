@@ -12,7 +12,6 @@ import { terser } from "rollup-plugin-terser";
 import ttypescript from "ttypescript";
 import typescript from "rollup-plugin-typescript2";
 import minimist from "minimist";
-import babelConfig from "./babel.config";
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs
@@ -22,7 +21,8 @@ const esbrowserslist = fs
   .filter((entry) => entry && entry.substring(0, 2) !== "ie");
 
 // Extract babel preset-env config, to combine with esbrowserslist
-const babelPresetEnvConfig = babelConfig.presets.filter(
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const babelPresetEnvConfig = require("./babel.config").presets.filter(
   (entry) => entry[0] === "@babel/preset-env"
 )[0][1];
 

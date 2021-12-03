@@ -23,3 +23,5 @@ jobs:
         run: npm run build
       - name: Check project linting
         run: npm run lint:check
+      - name: Run unit tests
+        run: npm run test

@@ -29,7 +29,7 @@
     "prebuild": "rimraf ./dist",
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.js",
     "lint:check": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 .",
-    "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --fix .",
+    "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix .",
     "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts",
     "prepack": "npm run build"
   },

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 interface SampleData {
   counter: number;
@@ -10,8 +10,8 @@ interface SampleData {
   };
 }
 
-export default /*#__PURE__*/defineComponent({
-  name: 'Jackdomleo7Sample', // vue component name
+export default /*#__PURE__*/ defineComponent({
+  name: "Jackdomleo7Sample", // vue component name
   data(): SampleData {
     return {
       counter: 5,
@@ -25,26 +25,26 @@ export default /*#__PURE__*/defineComponent({
   computed: {
     changedBy() {
       const { message } = this as SampleData;
-      if (!message.action) return 'initialized';
-      return `${message.action} ${message.amount || ''}`.trim();
+      if (!message.action) return "initialized";
+      return `${message.action} ${message.amount || ""}`.trim();
     },
   },
   methods: {
     increment(arg: Event | number): void {
-      const amount = (typeof arg !== 'number') ? 1 : arg;
+      const amount = typeof arg !== "number" ? 1 : arg;
       this.counter += amount;
-      this.message.action = 'incremented by';
+      this.message.action = "incremented by";
       this.message.amount = amount;
     },
     decrement(arg: Event | number): void {
-      const amount = (typeof arg !== 'number') ? 1 : arg;
+      const amount = typeof arg !== "number" ? 1 : arg;
       this.counter -= amount;
-      this.message.action = 'decremented by';
+      this.message.action = "decremented by";
       this.message.amount = amount;
     },
     reset(): void {
       this.counter = this.initCounter;
-      this.message.action = 'reset';
+      this.message.action = "reset";
       this.message.amount = null;
     },
   },
@@ -53,22 +53,15 @@ export default /*#__PURE__*/defineComponent({
 
 <template>
   <div class="jackdomleo7-sample">
-    <p>The counter was {{ changedBy }} to <b>{{ counter }}</b>.</p>
-    <button @click="increment">
-      Click +1
-    </button>
-    <button @click="decrement">
-      Click -1
-    </button>
-    <button @click="increment(5)">
-      Click +5
-    </button>
-    <button @click="decrement(5)">
-      Click -5
-    </button>
-    <button @click="reset">
-      Reset
-    </button>
+    <p>
+      The counter was {{ changedBy }} to <b>{{ counter }}</b
+      >.
+    </p>
+    <button @click="increment">Click +1</button>
+    <button @click="decrement">Click -1</button>
+    <button @click="increment(5)">Click +5</button>
+    <button @click="decrement(5)">Click -5</button>
+    <button @click="reset">Reset</button>
   </div>
 </template>
 

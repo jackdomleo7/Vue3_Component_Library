@@ -1,6 +1,7 @@
 node_modules/
 /dist/
 *.tgz
+.eslintcache
 
 # local env files
 .env.local

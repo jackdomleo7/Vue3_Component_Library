@@ -22,7 +22,7 @@
   "files": [
     "dist/*",
     "src/**/*.vue",
-    "src/**/!(*.spec).ts"
+    "src/**/!(*.spec|*.stories).ts"
   ],
   "sideEffects": false,
   "scripts": {

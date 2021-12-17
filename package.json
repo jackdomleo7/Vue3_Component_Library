@@ -35,7 +35,9 @@
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix .",
     "test": "jest",
     "test:update-snapshots": "jest --updateSnapshot",
-    "test:report": "open-cli report/index.html"
+    "test:report": "open-cli report/index.html",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -46,6 +48,10 @@
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@rollup/plugin-replace": "^3.0.0",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/vue3": "^6.4.9",
     "@types/jest": "^27.0.3",
     "@types/jest-axe": "^3.5.3",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
@@ -62,6 +68,7 @@
     "@vue/vue3-jest": "^27.0.0-alpha.4",
     "@zerollup/ts-transform-paths": "^1.7.18",
     "babel-jest": "^27.4.5",
+    "babel-loader": "^8.2.3",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -85,7 +92,8 @@
     "ts-jest": "^27.1.2",
     "ttypescript": "^1.5.13",
     "typescript": "^4.5.4",
-    "vue": "^3.2.26"
+    "vue": "^3.2.26",
+    "vue-loader": "^16.8.3"
   },
   "peerDependencies": {
     "vue": "3.x"
@@ -93,14 +101,5 @@
   "engines": {
     "node": ">=16",
     "npm": "8"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue,ts}": [
-      "npm run lint:fix",
-      "git add"
-    ]
   }
 }

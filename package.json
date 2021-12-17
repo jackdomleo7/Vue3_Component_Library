@@ -28,6 +28,7 @@
   "scripts": {
     "prepack": "npm run build",
     "serve": "start-storybook -p 6006",
+    "serve:static": "npm run build:docs && http-server docs --port 6007 -a localhost",
     "prebuild": "rimraf ./dist",
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.js",
     "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts",
@@ -72,6 +73,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.2.0",
+    "http-server": "^14.0.0",
     "jest": "^27.4.5",
     "jest-axe": "^5.0.1",
     "jest-stare": "^2.3.0",

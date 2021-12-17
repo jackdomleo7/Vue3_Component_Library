@@ -24,7 +24,6 @@
     "src/**/*.vue",
     "src/**/!(*.spec|*.stories).ts"
   ],
-  "sideEffects": false,
   "scripts": {
     "prepack": "npm run build",
     "serve": "start-storybook -p 6006",
@@ -52,6 +51,7 @@
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
     "@storybook/addon-links": "^6.4.9",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/vue3": "^6.4.9",
     "@types/jest": "^27.0.3",
     "@types/jest-axe": "^3.5.3",

@@ -80,7 +80,6 @@
     "jest": "^27.4.7",
     "jest-axe": "^5.0.1",
     "jest-stare": "^2.3.0",
-    "lint-staged": "^12.2.1",
     "minimist": "^1.2.5",
     "open-cli": "^7.0.1",
     "postcss": "^8.4.5",

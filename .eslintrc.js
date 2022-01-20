@@ -8,7 +8,9 @@ module.exports = {
     "eslint:recommended",
     "@vue/typescript/recommended",
     "@vue/prettier",
-    "@vue/prettier/@typescript-eslint",
+    "@vue/eslint-config-prettier",
+    "@vue/eslint-config-typescript",
+    "plugin:storybook/recommended",
   ],
   parserOptions: {
     ecmaVersion: 2020,

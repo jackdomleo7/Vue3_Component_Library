@@ -29,4 +29,4 @@ jobs:
         run: npm run test
       - name: Deploy docs
         if: github.ref == 'refs/heads/master'
-        run: push-dir --dir=docs --branch=gh-pages --cleanup
+        run: npm run deploy

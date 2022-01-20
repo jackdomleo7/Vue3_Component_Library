@@ -36,7 +36,8 @@
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix .",
     "test": "jest",
     "test:update-snapshots": "jest --updateSnapshot",
-    "test:report": "open-cli report/index.html"
+    "test:report": "open-cli report/index.html",
+    "deploy": "push-dir --dir=docs --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "@babel/core": "^7.16.10",

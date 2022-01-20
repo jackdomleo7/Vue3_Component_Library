@@ -21,9 +21,11 @@ jobs:
         run: npm ci
       - name: Check project can build successfully
         run: npm run build
+      - name: Check docs can build successfully
+        run: npm run build:docs
       - name: Check project linting
         run: npm run lint:check
       - name: Run unit tests
         run: npm run test
       - name: Deploy docs
-        run: git-branch-is master && push-dir --dir=docs --branch=gh-pages --cleanup
+        run: npm run deploy

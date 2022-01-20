@@ -28,4 +28,5 @@ jobs:
       - name: Run unit tests
         run: npm run test
       - name: Deploy docs
-        run: npm run deploy
+        if: github.ref == 'refs/heads/master'
+        run: push-dir --dir=docs --branch=gh-pages --cleanup

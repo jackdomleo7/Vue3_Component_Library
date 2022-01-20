@@ -25,3 +25,5 @@ jobs:
         run: npm run lint:check
       - name: Run unit tests
         run: npm run test
+      - name: Deploy docs
+        run: git-branch-is master && push-dir --dir=docs --branch=gh-pages --cleanup

@@ -29,4 +29,7 @@ jobs:
         run: npm run test
       - name: Deploy docs
         if: github.ref == 'refs/heads/master'
-        run: npm run deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        with:
+          branch: gh-pages
+          folder: docs

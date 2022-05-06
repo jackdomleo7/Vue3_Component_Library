@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JSample matches snapshot when mounted 1`] = `
+exports[`JSample snapshots matches snapshot when mounted 1`] = `
 <div
   class="jackdomleo7-sample"
 >
@@ -29,7 +29,7 @@ exports[`JSample matches snapshot when mounted 1`] = `
 </div>
 `;
 
-exports[`JSample matches snapshot when shallow mounted 1`] = `
+exports[`JSample snapshots matches snapshot when shallow mounted 1`] = `
 <div
   class="jackdomleo7-sample"
 >

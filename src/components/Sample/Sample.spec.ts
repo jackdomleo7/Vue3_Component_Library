@@ -23,17 +23,17 @@ describe("JSample", () => {
     expect(await axe(wrapper.element)).toHaveNoViolations();
   });
 
-  describe('snapshots', () => {
+  describe("snapshots", () => {
     it("matches snapshot when mounted", () => {
       const wrapper = mount(JSample);
-  
+
       expect(wrapper.element).toMatchSnapshot();
     });
-  
+
     it("matches snapshot when shallow mounted", () => {
       const wrapper = shallowMount(JSample);
-  
+
       expect(wrapper.element).toMatchSnapshot();
     });
-  })
+  });
 });

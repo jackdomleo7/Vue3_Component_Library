@@ -4,7 +4,7 @@
 
 # Check there is not more than 1 argument
 if ($args.Count -gt 1) { 
-  Write-Host " ERROR - More than 1 argument provided " -ForegroundColor black -BackgroundColor red
+  Write-Output " ERROR - More than 1 argument provided "
   throw "You must only provide one argument - this argument should be the name of the component as PascalCase"
 }
 
@@ -13,13 +13,13 @@ $componentName = $args[0]
 
 # If there is no argument provided, prompt user for value
 if ($args.Count -eq 0) {
-  Write-Host "Component name missing as argument, enter below " -ForegroundColor yellow
+  Write-Output " Component name missing as argument, enter below "
   $componentName = Read-Host 'Component name'
 }
 
 # Check component name is valid (must be PascalCase)
 if ($componentName.substring(0, 1) -cmatch "^[a-z]*$") { 
-  Write-Host " ERROR - Component name not written in PascalCase " -ForegroundColor black -BackgroundColor red
+  Write-Output " ERROR - Component name not written in PascalCase "
   throw "PascalCase requires the first letter to be capitalised"
 }
 
@@ -31,7 +31,7 @@ $prefixedComponentName = "J${componentName}"
 
 # Create component directory
 New-Item -ItemType "directory" -Path ".\src\components\" -Name $componentName | Out-Null
-Write-Host "Created ./src/components/${componentName} directory" -ForegroundColor DarkGray
+Write-Output "Created ./src/components/${componentName} directory"
 
 # Create component Vue file
 New-Item -ItemType "file" -Path ".\src\components\${componentName}\" -Name "${componentName}.vue" | Out-Null
@@ -52,7 +52,7 @@ export default defineComponent({
 @use '../../assets/scss/variables/scss' as *;
 </style>
 "@
-Write-Host "Created ./src/components/${componentName}/${componentName}.vue template" -ForegroundColor DarkGray
+Write-Output "Created ./src/components/${componentName}/${componentName}.vue template"
 
 # Create component unit test
 New-Item -ItemType "file" -Path ".\src\components\${componentName}\" -Name "${componentName}.spec.ts" | Out-Null
@@ -97,7 +97,7 @@ describe('${prefixedComponentName}', () => {
   })
 })
 "@
-Write-Host "Created ./src/components/${componentName}/${componentName}.spec.ts template" -ForegroundColor DarkGray
+Write-Output "Created ./src/components/${componentName}/${componentName}.spec.ts template"
 
 # Create component Storybook file
 New-Item -ItemType "file" -Path ".\src\components\${componentName}\" -Name "${componentName}.stories.ts" | Out-Null
@@ -128,15 +128,15 @@ const Template = (args: Record<string, unknown>) => ({
 export const Default: Story = Template.bind({})
 Default.args = {}
 "@
-Write-Host "Created ./src/components/${componentName}/${componentName}.stories.ts template" -ForegroundColor DarkGray
-Write-Host " "
+Write-Output "Created ./src/components/${componentName}/${componentName}.stories.ts template"
+Write-Output " "
 
 
 # Add component to components import/export file
 Add-Content .\src\components\index.ts "`nexport { default as ${prefixedComponentName} } from './${componentName}/${componentName}.vue'"
-Write-Host "Added ${prefixedComponentName} to components barrel file (./src/components/index.ts)" -ForegroundColor DarkGray
+Write-Output "Added ${prefixedComponentName} to components barrel file (./src/components/index.ts)"
 # Sort component imports in ./src/components/index.ts
 Invoke-Command {param($file='./src/components/index.ts') .\psSort.ps1 }
 
-Write-Host " "
-Write-Host " New Component Created: ${componentName} " -ForegroundColor black -BackgroundColor green
+Write-Output " "
+Write-Output " New Component Created: ${componentName} "

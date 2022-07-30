@@ -63,7 +63,8 @@
     }
   },
   "lint-staged": {
-    "*": ["pnpm run lint", "git add"]
+    "*.{js,ts,vue}": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix .",
+    "*": ["prettier -w -u", "git add"]
   },
   "packageManager": "pnpm@7.7.1",
   "engines": {

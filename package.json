@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
-    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix .",
+    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier -w -u .",
     "prepack": "del-cli \"*.tgz\" && pnpm run build"
   },
   "dependencies": {
@@ -63,8 +63,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "lint",
-    "*": "prettier -w -u"
+    "*": ["pnpm run lint", "git add"]
   },
   "packageManager": "pnpm@7.7.1",
   "engines": {

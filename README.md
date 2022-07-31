@@ -73,3 +73,33 @@ Build the project
 ```bash
   pnpm run build
 ```
+
+Check linting & formatting
+
+```bash
+  pnpm run lint:check
+```
+
+Fix linting & formatting
+
+```bash
+  pnpm run lint:fix
+```
+
+Run test suite in a single run
+
+```bash
+  pnpm run test
+```
+
+Run & watch test suite via a UI
+
+```bash
+  pnpm run test:watch
+```
+
+Open test suite coverage repository
+
+```bash
+  pnpm run test:update
+```

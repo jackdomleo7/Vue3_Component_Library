@@ -26,3 +26,11 @@ jobs:
         run: pnpm run build
       - name: Check project linting
         run: pnpm run lint:check
+      - name: Run unit test
+        run: pnpm run test
+      - uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/coverage-final.json
+          flags: unittests
+          fail_ci_if_error: true
+          verbose: true

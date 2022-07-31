@@ -1,0 +1,137 @@
+// Vitest Snapshot v1
+
+exports[`HelloWorld > snapshots > matches snapshot when mounted 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <h1
+    data-v-1f28467c=""
+  >
+    Hello there!
+  </h1>
+  <div
+    class="card"
+    data-v-1f28467c=""
+  >
+    <button
+      data-v-1f28467c=""
+      type="button"
+    >
+      count is 0
+    </button>
+    <p
+      data-v-1f28467c=""
+    >
+       Edit 
+      <code
+        data-v-1f28467c=""
+      >
+        components/HelloWorld.vue
+      </code>
+       to test HMR 
+    </p>
+  </div>
+  <p
+    data-v-1f28467c=""
+  >
+     Check out 
+    <a
+      data-v-1f28467c=""
+      href="https://vuejs.org/guide/quick-start.html#local"
+      target="_blank"
+    >
+      create-vue
+    </a>
+    , the official Vue + Vite starter 
+  </p>
+  <p
+    data-v-1f28467c=""
+  >
+     Install 
+    <a
+      data-v-1f28467c=""
+      href="https://github.com/johnsoncodehk/volar"
+      target="_blank"
+    >
+      Volar
+    </a>
+     in your IDE for a better DX 
+  </p>
+  <p
+    class="read-the-docs"
+    data-v-1f28467c=""
+  >
+    Click on the Vite and Vue logos to learn more
+  </p>
+  
+</div>
+`;
+
+exports[`HelloWorld > snapshots > matches snapshot when shallow mounted 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <h1
+    data-v-1f28467c=""
+  >
+    Hello there!
+  </h1>
+  <div
+    class="card"
+    data-v-1f28467c=""
+  >
+    <button
+      data-v-1f28467c=""
+      type="button"
+    >
+      count is 0
+    </button>
+    <p
+      data-v-1f28467c=""
+    >
+       Edit 
+      <code
+        data-v-1f28467c=""
+      >
+        components/HelloWorld.vue
+      </code>
+       to test HMR 
+    </p>
+  </div>
+  <p
+    data-v-1f28467c=""
+  >
+     Check out 
+    <a
+      data-v-1f28467c=""
+      href="https://vuejs.org/guide/quick-start.html#local"
+      target="_blank"
+    >
+      create-vue
+    </a>
+    , the official Vue + Vite starter 
+  </p>
+  <p
+    data-v-1f28467c=""
+  >
+     Install 
+    <a
+      data-v-1f28467c=""
+      href="https://github.com/johnsoncodehk/volar"
+      target="_blank"
+    >
+      Volar
+    </a>
+     in your IDE for a better DX 
+  </p>
+  <p
+    class="read-the-docs"
+    data-v-1f28467c=""
+  >
+    Click on the Vite and Vue logos to learn more
+  </p>
+  
+</div>
+`;

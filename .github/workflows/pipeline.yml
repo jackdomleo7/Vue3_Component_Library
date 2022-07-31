@@ -27,7 +27,7 @@ jobs:
       - name: Check project linting
         run: pnpm run lint:check
       - name: Run unit test
-        run: pnpm run test
+        run: vitest
       - uses: codecov/codecov-action@v3
         with:
           files: ./coverage/coverage-final.json

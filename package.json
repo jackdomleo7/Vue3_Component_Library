@@ -32,7 +32,7 @@
     "lint:check": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache . && prettier --check --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --cache --max-warnings=0",
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --fix --cache --max-warnings=0",
     "test": "vitest run --coverage",
-    "test:watch": "vitest --ui",
+    "test:watch": "vitest --ui --coverage",
     "test:coverage": "pnpm run test && open-cli ./coverage/index.html",
     "test:update": "pnpm run test --update",
     "prepack": "rimraf *.tgz && pnpm run build"

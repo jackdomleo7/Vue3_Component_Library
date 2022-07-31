@@ -7,23 +7,26 @@ A Vue3 component library for my own enjoyment, learning, & development <small>(f
 
 ## Tech Stack
 
-**Client:** Vue3, Vite, TypeScript, Rollup, pnpm
+**Client:** Vue3, Vite, TypeScript, Rollup, pnpm, ESLint, Prettier, Stylelint
 
 ## Installation
 
 Install @jackdomleo7/vue3-library
 
 npm
+
 ```bash
   npm install @jackdomleo7/vue3-library
 ```
 
 yarn
+
 ```bash
   yarn add @jackdomleo7/vue3-library
 ```
 
 pnpm
+
 ```bash
   pnpm install @jackdomleo7/vue3-library
 ```
@@ -33,11 +36,13 @@ pnpm
 Basic usage
 
 `App.vue`
+
 ```typescript
 import '@jackdomleo7/vue3-library/dist/style.css'
 ```
 
 Any component
+
 ```typescript
 import { JComponent } from '@jackdomleo7/vue3-library'
 ```

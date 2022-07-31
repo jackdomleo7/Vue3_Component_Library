@@ -2,7 +2,7 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true,
+    "es2022": true,
     "node": true
   },
   "extends": [
@@ -13,7 +13,7 @@
     "@vue/eslint-config-prettier"
   ],
   "parserOptions": {
-    "ecmaVersion": 2021
+    "ecmaVersion": 2022
   },
   "plugins": [],
   "rules": {}

@@ -21,7 +21,7 @@ describe.concurrent('HelloWorld', () => {
         }
       })
 
-      expect(wrapper).toMatchSnapshot()
+      expect(wrapper.element).toMatchSnapshot()
     })
 
     it('matches snapshot when mounted', () => {
@@ -31,7 +31,7 @@ describe.concurrent('HelloWorld', () => {
         }
       })
 
-      expect(wrapper).toMatchSnapshot()
+      expect(wrapper.element).toMatchSnapshot()
     })
   })
 

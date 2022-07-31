@@ -31,6 +31,7 @@ export default defineConfig({
     environment: 'happy-dom',
     coverage: {
       reporter: ['text', 'json', 'html']
-    }
+    },
+    clearMocks: true
   }
 })

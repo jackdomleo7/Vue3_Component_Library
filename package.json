@@ -28,7 +28,7 @@
     }
   },
   "scripts": {
-    "build": "vite build && vue-tsc --emitDeclarationOnly && exists dist/index.d.ts",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
     "lint:check": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache . && prettier --check --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --cache --max-warnings=0",
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --fix --cache --max-warnings=0",
     "test": "vitest run --coverage",
@@ -54,7 +54,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
-    "exists-command": "^0.1.2",
     "happy-dom": "^6.0.4",
     "open-cli": "^7.0.1",
     "postcss": "^8.4.14",

@@ -24,3 +24,5 @@ jobs:
         run: pnpm install --frozen-lockfile --strict-peer-dependencies
       - name: Check project can build successfully
         run: pnpm run build
+      - name: Check project linting
+        run: pnpm run lint:check

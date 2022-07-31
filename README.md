@@ -7,7 +7,7 @@ A Vue3 component library for my own enjoyment, learning, & development <small>(f
 
 ## Tech Stack
 
-**Client:** Vue3, Vite, TypeScript, Rollup, pnpm
+**Client:** Vue3, Vite, TypeScript, Rollup, pnpm, ESLint, Prettier, Stylelint
 
 ## Installation
 

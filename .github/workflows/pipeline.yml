@@ -26,3 +26,5 @@ jobs:
         run: pnpm run build
       - name: Check project linting
         run: pnpm run lint:check
+      - name: Run unit test
+        run: pnpm run test

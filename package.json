@@ -30,7 +30,8 @@
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --fix --cache --max-warnings=0",
-    "prepack": "del-cli \"*.tgz\" && pnpm run build"
+    "prepack": "del-cli \"*.tgz\" && pnpm run build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -48,7 +49,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
     "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
@@ -67,15 +67,5 @@
   "engines": {
     "node": "16",
     "pnpm": "7"
-  },
-  "lint-staged": {
-    "*": [
-      "npm run lint"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"       
-    }
   }
 }

@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
-    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier -w -u .",
+    "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache .",
     "prepack": "del-cli \"*.tgz\" && pnpm run build"
   },
   "dependencies": {

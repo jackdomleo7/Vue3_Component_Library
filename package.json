@@ -31,6 +31,10 @@
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "lint:check": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache . && prettier --check --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --cache --max-warnings=0",
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --fix --cache --max-warnings=0",
+    "test": "vitest run",
+    "test:watch": "vitest --ui",
+    "test:coverage": "vitest run --coverage && open-cli ./coverage/index.html",
+    "test:update": "vitest run --update",
     "prepack": "del-cli \"*.tgz\" && pnpm run build"
   },
   "dependencies": {
@@ -41,13 +45,18 @@
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
     "@vitejs/plugin-vue": "^3.0.1",
+    "@vitest/ui": "^0.20.2",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
+    "@vue/test-utils": "^2.0.2",
+    "c8": "^7.12.0",
     "del-cli": "^5.0.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.3.0",
+    "happy-dom": "^6.0.4",
+    "open-cli": "^7.0.1",
     "postcss": "^8.4.14",
     "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
@@ -58,6 +67,7 @@
     "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.4",
+    "vitest": "^0.20.2",
     "vue-tsc": "^0.39.3"
   },
   "peerDependencies": {

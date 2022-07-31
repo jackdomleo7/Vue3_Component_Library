@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
@@ -24,6 +24,13 @@ export default defineConfig({
           vue: 'Vue'
         }
       }
+    }
+  },
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+    coverage: {
+      reporter: ['text', 'json', 'html']
     }
   }
 })

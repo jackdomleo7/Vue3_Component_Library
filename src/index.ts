@@ -1,1 +1,1 @@
-export { default as JHelloWorld } from './components/HelloWorld.vue'
+export { default as JHelloWorld } from './components/HelloWorld/HelloWorld.vue'

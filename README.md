@@ -4,10 +4,11 @@ A Vue3 component library for my own enjoyment, learning, & development <small>(f
 
 [![Pipeline](https://github.com/jackdomleo7/Vue3_Component_Library/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/jackdomleo7/Vue3_Component_Library/actions/workflows/pipeline.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/jackdomleo7/vue3_component_library/badge)](https://www.codefactor.io/repository/github/jackdomleo7/vue3_component_library)
+[![codecov](https://codecov.io/gh/jackdomleo7/Vue3_Component_Library/branch/master/graph/badge.svg?token=KG10GLDQTN)](https://codecov.io/gh/jackdomleo7/Vue3_Component_Library)
 
 ## Tech Stack
 
-**Client:** Vue3, Vite, TypeScript, Rollup, pnpm, ESLint, Prettier, Stylelint
+**Client:** Vue3, Vite, TypeScript, Rollup, pnpm, ESLint, Prettier, Stylelint, Vitest, Jest
 
 ## Installation
 

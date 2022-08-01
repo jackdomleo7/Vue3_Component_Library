@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { shallowMount, mount } from '@vue/test-utils'
-import { JHelloWorld } from '../../index'
+import { JHelloWorld } from '@/index'
 
 describe.concurrent('HelloWorld', () => {
   it('is a Vue instance', () => {

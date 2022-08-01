@@ -28,14 +28,14 @@
     }
   },
   "scripts": {
-    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "prepack": "rimraf *.tgz && pnpm run build",
+    "build": "rimraf dist && vite build",
     "lint:check": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache . && prettier --check --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --cache --max-warnings=0",
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --fix --cache --max-warnings=0",
     "test": "vitest run --coverage",
     "test:watch": "vitest --ui --coverage",
     "test:coverage": "pnpm run test && open-cli ./coverage/index.html",
-    "test:update": "pnpm run test --update",
-    "prepack": "rimraf *.tgz && pnpm run build"
+    "test:update": "pnpm run test --update"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -67,8 +67,8 @@
     "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.4",
-    "vitest": "^0.20.2",
-    "vue-tsc": "^0.39.4"
+    "vite-plugin-dts": "^1.4.1",
+    "vitest": "^0.20.2"
   },
   "peerDependencies": {
     "vue": "3"

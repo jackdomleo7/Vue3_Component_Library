@@ -10,7 +10,8 @@
     "eslint:recommended",
     "@vue/typescript/recommended",
     "@vue/prettier",
-    "@vue/eslint-config-prettier"
+    "@vue/eslint-config-prettier",
+    "plugin:storybook/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2022

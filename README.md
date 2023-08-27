@@ -8,28 +8,16 @@ A Vue3 component library for my own enjoyment, learning, & development <small>(f
 
 ## Tech Stack
 
-**Client:** Vue3, Vite, TypeScript, Rollup, pnpm, ESLint, Prettier, Stylelint, Vitest, Jest
+**Client:** Vue3, Vite, TypeScript, Vitest, Storybook, Rollup, pnpm, ESLint, Prettier, Stylelint
 
 ## Installation
 
 Install @jackdomleo7/vue3-library
 
-npm
-
 ```bash
   npm install @jackdomleo7/vue3-library
-```
-
-yarn
-
-```bash
   yarn add @jackdomleo7/vue3-library
-```
-
-pnpm
-
-```bash
-  pnpm install @jackdomleo7/vue3-library
+  pnpm add @jackdomleo7/vue3-library
 ```
 
 ## Usage/Examples
@@ -67,6 +55,18 @@ Install dependencies (You will need pnpm)
 ```bash
   npm i -g pnpm
   pnpm i
+```
+
+Serve Storybook
+
+```bash
+  pnpm run serve
+```
+
+Build the project Storybook docs
+
+```bash
+  pnpm run build:docs
 ```
 
 Build the project

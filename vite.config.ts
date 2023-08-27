@@ -15,7 +15,12 @@ export default defineConfig({
       }
     ]
   },
-  plugins: [vue(), dts()],
+  plugins: [
+    vue(),
+    dts({
+      exclude: ['**/*.spec.ts', '**/*.stories.ts']
+    })
+  ],
   build: {
     target: 'esnext',
     outDir: 'dist',

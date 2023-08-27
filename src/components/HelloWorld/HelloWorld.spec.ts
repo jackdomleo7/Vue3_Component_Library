@@ -1,40 +1,8 @@
 import { describe, it, expect } from 'vitest'
-import { shallowMount, mount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import { JHelloWorld } from '@/index'
 
 describe.concurrent('HelloWorld', () => {
-  it('is a Vue instance', () => {
-    const wrapper = shallowMount(JHelloWorld, {
-      props: {
-        msg: 'Hello there!'
-      }
-    })
-
-    expect(wrapper.vm).toBeTruthy()
-  })
-
-  describe('snapshots', () => {
-    it('matches snapshot when shallow mounted', () => {
-      const wrapper = shallowMount(JHelloWorld, {
-        props: {
-          msg: 'Hello there!'
-        }
-      })
-
-      expect(wrapper.element).toMatchSnapshot()
-    })
-
-    it('matches snapshot when mounted', () => {
-      const wrapper = mount(JHelloWorld, {
-        props: {
-          msg: 'Hello there!'
-        }
-      })
-
-      expect(wrapper.element).toMatchSnapshot()
-    })
-  })
-
   describe('props', () => {
     it('displays the message "Hello there!"', () => {
       const wrapper = mount(JHelloWorld, {

@@ -19,7 +19,8 @@ jobs:
 
       - uses: pnpm/action-setup@v2
         name: Install pnpm
-        id: pnpm-install
+        with:
+          version: 8
 
       - name: Clean install dependencies
         run: pnpm install --frozen-lockfile --strict-peer-dependencies

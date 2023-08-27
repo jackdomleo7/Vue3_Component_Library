@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "outDir": "dist",
     "declaration": true,
-    "types": ["node", "@types/node", "vue"],
+    "types": ["vue"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

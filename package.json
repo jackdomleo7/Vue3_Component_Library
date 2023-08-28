@@ -16,7 +16,8 @@
   },
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "main": "./dist/jackdomleo7-vue3-library.umd.cjs",
   "module": "./dist/jackdomleo7-vue3-library.js",

@@ -1,0 +1,130 @@
+import { Meta, Title } from '@storybook/blocks'
+
+<Meta title="Setup/Tokens" />
+
+<Title>Tokens</Title>
+
+Tokens are globally accessible properties (represented as [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)) that define the design system. This design system, by default, is shipped with tokens that are designed to be simplistic, minimalistic, and customisable. The default colours are specifically chosen to be accessible across light and dark themes.
+
+All tokens are prefixed with `--j-`: e.g. `error` will be represented as `--j-error`.
+
+## Default Tokens
+
+These are also referenced in the "Docs" section.
+
+- `primary`: <code style={{color: 'var(--j-primary)'}}>#2680eb</code>
+- `error`: <code style={{color: 'var(--j-error)'}}>#e34850</code>
+- `warning`: <code style={{color: 'var(--j-warning)'}}>#e68619</code>
+- `success`: <code style={{color: 'var(--j-success)'}}>#2d9d78</code>
+
+## Customisation
+
+You can easily customise tokens by defining a new SCSS `$tokens` map when importing the global SCSS.
+
+```scss
+@use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
+  $tokens: (
+    'default': (
+      'primary': #00f,
+      'error': #f00,
+      'warning': #ff0,
+      'success': #0f0
+    )
+  )
+);
+```
+
+### Theming
+
+You can also define your own themes by providing multiple SCSS maps inside the `$tokens` map. Each theme name will always be prefixed by `.theme--`.
+
+```scss
+@use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
+  $tokens: (
+    'default': (
+      'primary': #00f,
+      'error': #f00,
+      'warning': #ff0,
+      'success': #0f0
+    ),
+    'dark': (
+      'primary': #00f,
+      'error': #f00,
+      'warning': #ff0,
+      'success': #0f0
+    ),
+    'dusk': (
+      'primary': #00f,
+      'error': #f00,
+      'warning': #ff0,
+      'success': #0f0
+    )
+  )
+);
+```
+
+The above will generate the following CSS:
+
+```css
+:root {
+  --j-primary: #00f;
+  --j-error: #f00;
+  --j-warning: #ff0;
+  --j-success: #0f0;
+}
+
+.theme--dark {
+  --j-primary: #00f;
+  --j-error: #f00;
+  --j-warning: #ff0;
+  --j-success: #0f0;
+}
+
+.theme--dusk {
+  --j-primary: #00f;
+  --j-error: #f00;
+  --j-warning: #ff0;
+  --j-success: #0f0;
+}
+```
+
+You can then add the `.theme--dark` class to the `<body>` element to overwrite the default tokens with the 'dark' theme tokens.
+
+NOTE: 'default' will always create CSS custom properties on the `:root` element. If you do not want this, you can replace with anything else. E.g.
+
+```scss
+@use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
+  $tokens: (
+    'light': (
+      'primary': #00f,
+      'error': #f00,
+      'warning': #ff0,
+      'success': #0f0
+    ),
+    'dark': (
+      'primary': #00f,
+      'error': #f00,
+      'warning': #ff0,
+      'success': #0f0
+    )
+  )
+);
+```
+
+The above will generate the following CSS (by not defining 'default', you remove any CSS overwrites with the custom properties but also means you must ensure a class is always applied to the `<body>` element):
+
+```css
+.theme--light {
+  --j-primary: #00f;
+  --j-error: #f00;
+  --j-warning: #ff0;
+  --j-success: #0f0;
+}
+
+.theme--dark {
+  --j-primary: #00f;
+  --j-error: #f00;
+  --j-warning: #ff0;
+  --j-success: #0f0;
+}
+```

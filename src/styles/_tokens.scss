@@ -1,3 +1,4 @@
+$global-accent: #80d;
 $global-blue: #2680eb;
 $global-red: #e34850;
 $global-yellow: #e68619;
@@ -8,7 +9,14 @@ $global-green: #2d9d78;
 */
 $tokens: (
   'default': (
-    'accent': #80d,
+    'accent': $global-accent,
+    'info': $global-blue,
+    'error': $global-red,
+    'warning': $global-yellow,
+    'success': $global-green
+  ),
+  'dark': (
+    'accent': $global-accent,
     'info': $global-blue,
     'error': $global-red,
     'warning': $global-yellow,

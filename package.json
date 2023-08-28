@@ -28,7 +28,7 @@
     }
   },
   "scripts": {
-    "prepack": "rimraf *.tgz && pnpm run build",
+    "prepack": "rimraf --glob *.tgz && pnpm run build",
     "serve": "storybook dev -p 6006",
     "serve:static": "http-serve docs -p 6007 -o",
     "build:docs": "storybook build -o ./docs",

@@ -1,22 +1,32 @@
-/**
-* Global tokens - raw values
-*/
-$global-blue: #2680eb !default;
-$global-red: #e34850 !default;
-$global-yellow: #e68619 !default;
-$global-green: #2d9d78 !default;
+$global-blue: #2680eb;
+$global-red: #e34850;
+$global-yellow: #e68619;
+$global-green: #2d9d78;
 
 /**
-* Alias tokens - named values
+* Customisable map
 */
-$alias-primary: $global-blue !default;
-$alias-error: $global-red !default;
-$alias-warning: $global-yellow !default;
-$alias-success: $global-green !default;
+$tokens: (
+  'default': (
+    'primary': $global-blue,
+    'error': $global-red,
+    'warning': $global-yellow,
+    'success': $global-green
+  )
+) !default;
 
-:root {
-  --j-primary: #{$alias-primary};
-  --j-error: #{$alias-error};
-  --j-warning: #{$alias-warning};
-  --j-success: #{$alias-success};
+@each $theme, $map in $tokens {
+  @if $theme == 'default' {
+    :root {
+      @each $key, $value in $map {
+        --j-#{$key}: #{$value};
+      }
+    }
+  } @else {
+    .theme--#{$theme} {
+      @each $key, $value in $map {
+        --j-#{$key}: #{$value};
+      }
+    }
+  }
 }

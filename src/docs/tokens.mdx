@@ -12,7 +12,7 @@ All tokens are prefixed with `--j-`: e.g. `error` will be represented as `--j-er
 
 These are also referenced in the "Docs" section.
 
-- `primary`: <code style={{color: 'var(--j-primary)'}}>#2680eb</code>
+- `info`: <code style={{color: 'var(--j-info)'}}>#2680eb</code>
 - `error`: <code style={{color: 'var(--j-error)'}}>#e34850</code>
 - `warning`: <code style={{color: 'var(--j-warning)'}}>#e68619</code>
 - `success`: <code style={{color: 'var(--j-success)'}}>#2d9d78</code>
@@ -25,7 +25,7 @@ You can easily customise tokens by defining a new SCSS `$tokens` map when import
 @use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
   $tokens: (
     'default': (
-      'primary': #00f,
+      'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
@@ -42,19 +42,19 @@ You can also define your own themes by providing multiple SCSS maps inside the `
 @use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
   $tokens: (
     'default': (
-      'primary': #00f,
+      'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
     ),
     'dark': (
-      'primary': #00f,
+      'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
     ),
     'dusk': (
-      'primary': #00f,
+      'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
@@ -67,21 +67,21 @@ The above will generate the following CSS:
 
 ```css
 :root {
-  --j-primary: #00f;
+  --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
   --j-success: #0f0;
 }
 
 .theme--dark {
-  --j-primary: #00f;
+  --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
   --j-success: #0f0;
 }
 
 .theme--dusk {
-  --j-primary: #00f;
+  --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
   --j-success: #0f0;
@@ -96,13 +96,13 @@ NOTE: 'default' will always create CSS custom properties on the `:root` element.
 @use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
   $tokens: (
     'light': (
-      'primary': #00f,
+      'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
     ),
     'dark': (
-      'primary': #00f,
+      'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
@@ -115,14 +115,14 @@ The above will generate the following CSS (by not defining 'default', you remove
 
 ```css
 .theme--light {
-  --j-primary: #00f;
+  --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
   --j-success: #0f0;
 }
 
 .theme--dark {
-  --j-primary: #00f;
+  --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
   --j-success: #0f0;

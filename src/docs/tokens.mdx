@@ -12,6 +12,7 @@ All tokens are prefixed with `--j-`: e.g. `error` will be represented as `--j-er
 
 These are also referenced in the "Docs" section.
 
+- `accent`: <code style={{color: 'var(--j-accent)'}}>#80d</code>
 - `info`: <code style={{color: 'var(--j-info)'}}>#2680eb</code>
 - `error`: <code style={{color: 'var(--j-error)'}}>#e34850</code>
 - `warning`: <code style={{color: 'var(--j-warning)'}}>#e68619</code>
@@ -25,6 +26,7 @@ You can easily customise tokens by defining a new SCSS `$tokens` map when import
 @use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
   $tokens: (
     'default': (
+      'accent': #80d,
       'info': #00f,
       'error': #f00,
       'warning': #ff0,
@@ -42,18 +44,21 @@ You can also define your own themes by providing multiple SCSS maps inside the `
 @use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
   $tokens: (
     'default': (
+      'accent': #80d,
       'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
     ),
     'dark': (
+      'accent': #80d,
       'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
     ),
     'dusk': (
+      'accent': #80d,
       'info': #00f,
       'error': #f00,
       'warning': #ff0,
@@ -67,6 +72,7 @@ The above will generate the following CSS:
 
 ```css
 :root {
+  --j-accent: #80d;
   --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
@@ -74,6 +80,7 @@ The above will generate the following CSS:
 }
 
 .theme--dark {
+  --j-accent: #80d;
   --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
@@ -81,6 +88,7 @@ The above will generate the following CSS:
 }
 
 .theme--dusk {
+  --j-accent: #80d;
   --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
@@ -96,12 +104,14 @@ NOTE: 'default' will always create CSS custom properties on the `:root` element.
 @use '~@jackdomleo7/vue3-library/src/styles/main.scss' as * with (
   $tokens: (
     'light': (
+      'accent': #80d,
       'info': #00f,
       'error': #f00,
       'warning': #ff0,
       'success': #0f0
     ),
     'dark': (
+      'accent': #80d,
       'info': #00f,
       'error': #f00,
       'warning': #ff0,
@@ -115,6 +125,7 @@ The above will generate the following CSS (by not defining 'default', you remove
 
 ```css
 .theme--light {
+  --j-accent: #80d;
   --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;
@@ -122,6 +133,7 @@ The above will generate the following CSS (by not defining 'default', you remove
 }
 
 .theme--dark {
+  --j-accent: #80d;
   --j-info: #00f;
   --j-error: #f00;
   --j-warning: #ff0;

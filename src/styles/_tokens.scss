@@ -1,0 +1,22 @@
+/**
+* Global tokens - raw values
+*/
+$global-blue: #2680eb !default;
+$global-red: #e34850 !default;
+$global-yellow: #e68619 !default;
+$global-green: #2d9d78 !default;
+
+/**
+* Alias tokens - named values
+*/
+$alias-primary: $global-blue !default;
+$alias-error: $global-red !default;
+$alias-warning: $global-yellow !default;
+$alias-success: $global-green !default;
+
+:root {
+  --j-primary: #{$alias-primary};
+  --j-error: #{$alias-error};
+  --j-warning: #{$alias-warning};
+  --j-success: #{$alias-success};
+}

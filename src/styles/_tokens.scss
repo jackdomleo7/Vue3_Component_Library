@@ -1,40 +1,113 @@
-$global-accent: #80d;
-$global-blue: #2680eb;
-$global-red: #e34850;
-$global-yellow: #e68619;
-$global-green: #2d9d78;
+@use 'sass:map';
+@use 'sass:string';
+
+$j-globals: (
+  'accent': #80d,
+  'blue': #2680eb,
+  'red': #e34850,
+  'yellow': #e68619,
+  'green': #2d9d78,
+  'grey-50': #fff,
+  'grey-75': #f5f5f5,
+  'grey-100': #eaeaea,
+  'grey-200': #e3e3e3,
+  'grey-300': #e1e1e1,
+  'grey-400': #cacaca,
+  'grey-500': #b3b3b3,
+  'grey-600': #3e3e3e,
+  'grey-700': #323232,
+  'grey-800': #2f2f2f,
+  'grey-900': #252525
+);
 
 /**
 * Customisable map
 */
 $tokens: (
-  'default': (
-    'accent': $global-accent,
-    'info': $global-blue,
-    'error': $global-red,
-    'warning': $global-yellow,
-    'success': $global-green
+  'j-default': (
+    'accent': map.get($j-globals, 'accent'),
+    'info': map.get($j-globals, 'blue'),
+    'error': map.get($j-globals, 'red'),
+    'warning': map.get($j-globals, 'yellow'),
+    'success': map.get($j-globals, 'green'),
+    'bg': map.get($j-globals, 'grey-50'),
+    'bg1': map.get($j-globals, 'grey-75'),
+    'bg2': map.get($j-globals, 'grey-100'),
+    'primary': map.get($j-globals, 'grey-900'),
+    'secondary': map.get($j-globals, 'grey-800'),
+    'tertiary': map.get($j-globals, 'grey-700'),
+    'link': map.get($j-globals, 'blue')
   ),
-  'dark': (
-    'accent': $global-accent,
-    'info': $global-blue,
-    'error': $global-red,
-    'warning': $global-yellow,
-    'success': $global-green
+  'j-dark': (
+    'accent': map.get($j-globals, 'accent'),
+    'info': map.get($j-globals, 'blue'),
+    'error': map.get($j-globals, 'red'),
+    'warning': map.get($j-globals, 'yellow'),
+    'success': map.get($j-globals, 'green'),
+    'bg': map.get($j-globals, 'grey-900'),
+    'bg1': map.get($j-globals, 'grey-800'),
+    'bg2': map.get($j-globals, 'grey-700'),
+    'primary': map.get($j-globals, 'grey-50'),
+    'secondary': map.get($j-globals, 'grey-200'),
+    'tertiary': map.get($j-globals, 'grey-400'),
+    'link': map.get($j-globals, 'blue')
   )
 ) !default;
 
+@function str-replace($string, $search, $replace: '') {
+  $index: string.index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        string.slice($string, $index + string.length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
 @each $theme, $map in $tokens {
-  @if $theme == 'default' {
-    :root {
-      @each $key, $value in $map {
-        --j-#{$key}: #{$value};
+  // If using default built-in tokens, then include global tokens as CSS properties
+  @if str-index($theme, 'j-') {
+    @if str-replace($theme, 'j-', '') == 'default' {
+      :root {
+        @each $key, $value in $j-globals {
+          --j-global-#{$key}: #{$value};
+        }
+
+        @each $key, $value in $map {
+          --j-#{$key}: #{$value};
+        }
+      }
+    } @else {
+      .theme--#{str-replace($theme, 'j-', '')} {
+        @each $key, $value in $j-globals {
+          --j-global-#{$key}: #{$value};
+        }
+
+        @each $key, $value in $map {
+          --j-#{$key}: #{$value};
+        }
       }
     }
-  } @else {
-    .theme--#{$theme} {
-      @each $key, $value in $map {
-        --j-#{$key}: #{$value};
+  }
+
+  // Else custom tokens, do not include built-in default tokens as CSS properties
+  @else {
+    @if $theme == 'default' {
+      :root {
+        @each $key, $value in $map {
+          --j-#{$key}: #{$value};
+        }
+      }
+    } @else {
+      .theme--#{$theme} {
+        @each $key, $value in $map {
+          --j-#{$key}: #{$value};
+        }
       }
     }
   }

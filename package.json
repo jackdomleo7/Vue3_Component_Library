@@ -39,7 +39,8 @@
     "test": "vitest run --coverage",
     "test:watch": "vitest --ui --coverage",
     "test:coverage": "pnpm run test && open-cli ./coverage/index.html",
-    "test:update": "pnpm run test --update"
+    "test:update": "pnpm run test --update",
+    "new-component": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./newComponent.ps1"
   },
   "dependencies": {
     "vue": "^3.3.4"

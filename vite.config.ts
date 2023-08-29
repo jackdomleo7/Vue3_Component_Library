@@ -51,6 +51,7 @@ export default defineConfig({
     coverage: {
       reporter: ['text', 'json', 'html']
     },
-    clearMocks: true
+    clearMocks: true,
+    setupFiles: ['./vitest.setup.ts']
   }
 })

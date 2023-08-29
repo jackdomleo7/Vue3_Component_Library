@@ -16,7 +16,8 @@
   },
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "main": "./dist/jackdomleo7-vue3-library.umd.cjs",
   "module": "./dist/jackdomleo7-vue3-library.js",
@@ -28,7 +29,7 @@
     }
   },
   "scripts": {
-    "prepack": "rimraf *.tgz && pnpm run build",
+    "prepack": "rimraf --glob *.tgz && pnpm run build",
     "serve": "storybook dev -p 6006",
     "serve:static": "http-serve docs -p 6007 -o",
     "build:docs": "storybook build -o ./docs",

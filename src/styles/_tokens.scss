@@ -2,6 +2,7 @@
 @use 'sass:string';
 
 $j-globals: (
+  'font-family': 'Arial, sans-serif',
   'accent': #80d,
   'blue': #2680eb,
   'red': #e34850,
@@ -25,6 +26,7 @@ $j-globals: (
 */
 $tokens: (
   'j-default': (
+    'font-family': map.get($j-globals, 'font-family'),
     'accent': map.get($j-globals, 'accent'),
     'info': map.get($j-globals, 'blue'),
     'error': map.get($j-globals, 'red'),
@@ -39,6 +41,7 @@ $tokens: (
     'link': map.get($j-globals, 'blue')
   ),
   'j-dark': (
+    'font-family': map.get($j-globals, 'font-family'),
     'accent': map.get($j-globals, 'accent'),
     'info': map.get($j-globals, 'blue'),
     'error': map.get($j-globals, 'red'),

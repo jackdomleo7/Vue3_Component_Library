@@ -8,7 +8,7 @@ if($componentName.substring(0, 1) -cmatch "^[a-z]*$") { throw "PascalCase requir
 Write-Output "New component: ${componentName}"
 
 # Add component to components import/export file
-Add-Content .\src\index.ts "`nexport { default as ${prefixedComponentName} } from './${componentName}/${componentName}.vue'"
+Add-Content .\src\index.ts "`nexport { default as ${prefixedComponentName} } from './components/${componentName}/${componentName}.vue'"
 Write-Output "Added ${componentName} to components import/export file (./src/components/index.ts)"
 
 # Create component directory
@@ -37,7 +37,7 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ${prefixedComponentName} } from '@/index'
 
-describe.concurrent('${prefixedComponentName}', () => {
+describe.concurrent('${componentName}', () => {
   
 })
 "@

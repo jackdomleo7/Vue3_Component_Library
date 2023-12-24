@@ -1,4 +1,4 @@
-import{d as E}from"./index-356e4a49.js";const{useMemo:f,useEffect:v}=__STORYBOOK_MODULE_PREVIEW_API__,{global:M}=__STORYBOOK_MODULE_GLOBAL__,{logger:h}=__STORYBOOK_MODULE_CLIENT_LOGGER__;var p="backgrounds",{document:s,window:B}=M,S=()=>B.matchMedia("(prefers-reduced-motion: reduce)").matches,x=(r,e=[],a)=>{if(r==="transparent")return"transparent";if(e.find(t=>t.value===r))return r;let n=e.find(t=>t.name===a);if(n)return n.value;if(a){let t=e.map(o=>o.name).join(", ");h.warn(E`
+import{d as E}from"./index-PPLHz8o0.js";const{useMemo:f,useEffect:v}=__STORYBOOK_MODULE_PREVIEW_API__,{global:M}=__STORYBOOK_MODULE_GLOBAL__,{logger:h}=__STORYBOOK_MODULE_CLIENT_LOGGER__;var p="backgrounds",{document:s,window:B}=M,S=()=>B.matchMedia("(prefers-reduced-motion: reduce)").matches,x=(r,e=[],a)=>{if(r==="transparent")return"transparent";if(e.find(t=>t.value===r))return r;let n=e.find(t=>t.name===a);if(n)return n.value;if(a){let t=e.map(o=>o.name).join(", ");h.warn(E`
         Backgrounds Addon: could not find the default color "${a}".
         These are the available colors for your story based on your configuration:
         ${t}.

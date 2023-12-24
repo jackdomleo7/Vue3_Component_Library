@@ -50,7 +50,7 @@ describe('Button', () => {
 
     // Assert
     expect(wrapper.find('button').exists()).toBe(true);
-    expect(wrapper.find('button').attributes('class')).toContain('btn--status');
+    expect(wrapper.find('button').classes()).toContain('j-btn--status');
     expect(wrapper.find('button').attributes('style')).toContain(
       '--j-btn-background-color: var(--j-accent)'
     );
@@ -117,7 +117,7 @@ describe('Button', () => {
 
       // Assert
       expect(wrapper.find('button').exists()).toBe(true);
-      expect(wrapper.find('button').classes()).toContain('btn--icon-before');
+      expect(wrapper.find('button').classes()).toContain('j-btn--icon-before');
       expect(wrapper.findComponent(JIcon).exists()).toBe(true);
       expect(wrapper.text()).toBe('Click me');
       expect(wrapper.find('button').attributes('title')).toBeUndefined();
@@ -142,7 +142,7 @@ describe('Button', () => {
 
       // Assert
       expect(wrapper.find('button').exists()).toBe(true);
-      expect(wrapper.find('button').classes()).toContain('btn--icon-after');
+      expect(wrapper.find('button').classes()).toContain('j-btn--icon-after');
       expect(wrapper.findComponent(JIcon).exists()).toBe(true);
       expect(wrapper.text()).toBe('Click me');
       expect(wrapper.find('button').attributes('title')).toBeUndefined();
@@ -167,7 +167,7 @@ describe('Button', () => {
 
       // Assert
       expect(wrapper.find('button').exists()).toBe(true);
-      expect(wrapper.find('button').classes()).toContain('btn--icon-only');
+      expect(wrapper.find('button').classes()).toContain('j-btn--icon-only');
       expect(wrapper.findComponent(JIcon).exists()).toBe(true);
       expect(wrapper.text()).toBe('');
       expect(wrapper.find('button').attributes('title')).toBe('Click me');

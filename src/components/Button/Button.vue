@@ -3,7 +3,7 @@
   <component
     :is="href ? 'a' : 'button'"
     :href="href"
-    class="btn"
+    class="j-btn"
     :title="icon?.position === 'icon-only' ? defaultSlotContent : undefined"
     :style="
       status
@@ -20,10 +20,10 @@
         : ''
     "
     :class="{
-      'btn--status': status,
-      'btn--icon-only': icon?.position === 'icon-only',
-      'btn--icon-before': icon?.position === 'before-text',
-      'btn--icon-after': icon?.position === 'after-text'
+      'j-btn--status': status,
+      'j-btn--icon-only': icon?.position === 'icon-only',
+      'j-btn--icon-before': icon?.position === 'before-text',
+      'j-btn--icon-after': icon?.position === 'after-text'
     }"
     :disabled="disabled"
   >
@@ -56,7 +56,7 @@ const defaultSlotContent = computed<string>(() => {
 </script>
 
 <style lang="scss" scoped>
-.btn {
+.j-btn {
   --j-btn-height: 2.5rem;
   --j-btn-background-color: transparent;
   --j-btn-border-color: transparent;

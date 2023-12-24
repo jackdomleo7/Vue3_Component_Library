@@ -1,5 +1,5 @@
-import { type Preview } from '@storybook/vue3'
-import '../src/styles/main.scss'
+import { type Preview } from '@storybook/vue3';
+import '../src/styles/main.scss';
 
 const preview: Preview = {
   parameters: {
@@ -37,19 +37,19 @@ const preview: Preview = {
         data() {
           return {
             theme: context.globals.theme
-          }
+          };
         },
         created() {
           document.body.setAttribute(
             'class',
             this.theme !== 'light' ? `theme--${this.theme}` : ''
-          )
+          );
         },
         components: { story },
         template: '<story />'
-      }
+      };
     }
   ]
-}
+};
 
-export default preview
+export default preview;

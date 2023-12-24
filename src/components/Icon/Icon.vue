@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts" setup>
-import { type PropType } from 'vue'
-import InlineSvg from 'vue-inline-svg'
-import type { Icon } from '../../types'
+import { type PropType } from 'vue';
+import InlineSvg from 'vue-inline-svg';
+import type { Icon } from '../../types';
 
 defineProps({
   icon: {
@@ -17,8 +17,8 @@ defineProps({
     required: true,
     validator: (icon: Icon.Icon): boolean => {
       // Only allow undefined prop or icon that includes ".svg" in the path
-      return icon.src.includes('.svg')
+      return icon.src.includes('.svg');
     }
   }
-})
+});
 </script>

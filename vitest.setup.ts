@@ -1,9 +1,9 @@
-import { afterEach, vitest } from 'vitest'
-import { enableAutoUnmount } from '@vue/test-utils'
+import { afterEach, vitest } from 'vitest';
+import { enableAutoUnmount } from '@vue/test-utils';
 
-enableAutoUnmount(afterEach)
+enableAutoUnmount(afterEach);
 
 afterEach(() => {
-  vitest.restoreAllMocks()
-  vitest.clearAllTimers()
-})
+  vitest.restoreAllMocks();
+  vitest.clearAllTimers();
+});

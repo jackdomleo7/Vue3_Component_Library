@@ -27,13 +27,13 @@ Basic usage
 `App.vue`
 
 ```typescript
-import '@jackdomleo7/vue3-library/dist/style.css'
+import '@jackdomleo7/vue3-library/dist/style.css';
 ```
 
 Any component
 
 ```typescript
-import { JComponent } from '@jackdomleo7/vue3-library'
+import { JComponent } from '@jackdomleo7/vue3-library';
 ```
 
 ## Run Locally

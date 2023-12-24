@@ -34,25 +34,25 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, defineAsyncComponent, useSlots } from 'vue'
-import type { Button } from '@/types'
+import { computed, defineAsyncComponent, useSlots } from 'vue';
+import type { Button } from '@/types';
 
-const JIcon = defineAsyncComponent(() => import('../Icon/Icon.vue'))
+const JIcon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
 
 defineProps<{
-  href?: string
-  status?: Button.Status
-  outline?: boolean
-  icon?: Button.Icon
-  disabled?: boolean
-}>()
+  href?: string;
+  status?: Button.Status;
+  outline?: boolean;
+  icon?: Button.Icon;
+  disabled?: boolean;
+}>();
 
 const defaultSlotContent = computed<string>(() => {
-  const $default = useSlots()['default']!
-  let cumulativeContent = ''
-  $default().forEach((el) => (cumulativeContent += el.children))
-  return cumulativeContent
-})
+  const $default = useSlots()['default']!;
+  let cumulativeContent = '';
+  $default().forEach((el) => (cumulativeContent += el.children));
+  return cumulativeContent;
+});
 </script>
 
 <style lang="scss" scoped>

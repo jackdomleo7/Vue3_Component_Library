@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/vue3'
+import type { Meta, StoryObj } from '@storybook/vue3';
 
-import JButton from './Button.vue'
+import JButton from './Button.vue';
 
 const meta = {
   title: 'Components/Button',
@@ -12,23 +12,23 @@ const meta = {
       options: [undefined, 'accent', 'info', 'error', 'warning', 'success']
     }
   }
-} satisfies Meta<typeof JButton>
+} satisfies Meta<typeof JButton>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
     default: 'Click me'
   }
-}
+};
 
 export const Status: Story = {
   args: {
     default: 'Click me',
     status: 'info'
   }
-}
+};
 
 export const Outline: Story = {
   args: {
@@ -36,7 +36,7 @@ export const Outline: Story = {
     status: 'info',
     outline: true
   }
-}
+};
 
 export const IconBefore: Story = {
   args: {
@@ -47,7 +47,7 @@ export const IconBefore: Story = {
       position: 'before-text'
     }
   }
-}
+};
 
 export const IconAfter: Story = {
   args: {
@@ -58,7 +58,7 @@ export const IconAfter: Story = {
       position: 'after-text'
     }
   }
-}
+};
 
 export const IconOnly: Story = {
   args: {
@@ -69,7 +69,7 @@ export const IconOnly: Story = {
       position: 'icon-only'
     }
   }
-}
+};
 
 export const Link: Story = {
   args: {
@@ -77,7 +77,7 @@ export const Link: Story = {
     status: 'info',
     href: '#'
   }
-}
+};
 
 export const Disabled: Story = {
   args: {
@@ -85,4 +85,4 @@ export const Disabled: Story = {
     status: 'info',
     disabled: true
   }
-}
+};

@@ -5,18 +5,19 @@
     "es2022": true,
     "node": true
   },
+  "plugins": ["vitest"],
   "extends": [
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
     "@vue/typescript/recommended",
     "@vue/prettier",
     "@vue/eslint-config-prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:vitest/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2022
   },
-  "plugins": [],
   "rules": {
     "vue/multi-word-component-names": "off"
   }

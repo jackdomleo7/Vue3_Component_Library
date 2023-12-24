@@ -12,6 +12,7 @@ a {
   color: var(--j-link);
 }
 
-a, button {
+a,
+button {
   touch-action: manipulation;
 }

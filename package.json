@@ -43,7 +43,8 @@
     "new-component": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./newComponent.ps1"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-inline-svg": "^3.1.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.3.2",
@@ -84,6 +85,7 @@
     "stylelint-config-standard-scss": "^10.0.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
+    "vite-plugin-cp": "^4.0.4",
     "vite-plugin-dts": "^3.5.2",
     "vitest": "^0.34.3"
   },

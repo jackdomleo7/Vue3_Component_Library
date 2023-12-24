@@ -11,7 +11,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "outDir": "dist",
     "declaration": true,
     "types": ["vue", "vite/client", "vitest/globals"],

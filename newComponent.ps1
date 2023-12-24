@@ -37,7 +37,7 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { ${prefixedComponentName} } from '@/index'
 
-describe.concurrent('${componentName}', () => {
+describe('${componentName}', () => {
   
 })
 "@

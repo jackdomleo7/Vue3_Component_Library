@@ -53,7 +53,9 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     coverage: {
-      reporter: ['text', 'json', 'html']
+      reporter: ['text', 'json', 'html'],
+      all: true,
+      include: ['src/components/**/*.vue']
     },
     clearMocks: true,
     setupFiles: ['./vitest.setup.ts']

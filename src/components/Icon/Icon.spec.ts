@@ -3,7 +3,7 @@ import { JIcon } from '@/index';
 import InlineSvg from 'vue-inline-svg';
 import type { Icon } from '@/types';
 
-describe.concurrent('Icon', () => {
+describe('Icon', () => {
   it('renders a decorative icon', () => {
     // Arrange
     const icon: Icon.Icon = {

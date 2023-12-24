@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils';
 import { JButton, JIcon } from '@/index';
 import type { Button } from '@/types';
 
-describe.concurrent('Button', () => {
+describe('Button', () => {
   it('renders a basic button', () => {
     // Arrange
     const wrapper = shallowMount(JButton, {

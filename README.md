@@ -63,7 +63,13 @@ Serve Storybook
   pnpm run serve
 ```
 
-Build the project Storybook docs
+Serve static Storybook
+
+```bash
+  pnpm run serve:static
+```
+
+Build static Storybook docs
 
 ```bash
   pnpm run build:docs
@@ -93,14 +99,14 @@ Run test suite in a single run
   pnpm run test
 ```
 
-Run & watch test suite via a UI
+Open unit test report in the browser
 
 ```bash
-  pnpm run test:watch
+  pnpm run test:report
 ```
 
-Open test suite coverage repository
+Add a new component to the library
 
 ```bash
-  pnpm run test:update
+  pnpm run new-component MyComponent
 ```

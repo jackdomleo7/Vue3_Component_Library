@@ -12,17 +12,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 8
+          version: 9
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'pnpm'
 
       - name: Clean install dependencies
         run: pnpm install --frozen-lockfile --strict-peer-dependencies
@@ -39,7 +40,7 @@ jobs:
       - name: Run unit test
         run: pnpm run test
 
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         with:
           files: ./coverage/coverage-final.json
           flags: unittests

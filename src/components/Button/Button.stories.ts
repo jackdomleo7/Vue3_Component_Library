@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import JButton from './Button.vue';
+import Button from './Button.vue';
 
 const meta = {
   title: 'Components/Button',
-  component: JButton,
-  tags: ['autodocs'],
+  component: Button,
   argTypes: {
     type: {
       control: 'radio',
@@ -16,7 +15,7 @@ const meta = {
       options: [undefined, 'accent', 'info', 'error', 'warning', 'success']
     }
   }
-} satisfies Meta<typeof JButton>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -33,7 +33,7 @@ import '@jackdomleo7/vue3-library/dist/style.css';
 Any component
 
 ```typescript
-import { JComponent } from '@jackdomleo7/vue3-library';
+import ComponentName from '@jackdomleo7/vue3-library/ComponentName.vue';
 ```
 
 ## Run Locally

@@ -1,15 +1,15 @@
 import { shallowMount } from '@vue/test-utils';
-import { JIcon } from '@/index';
+import Icon from './Icon.vue';
 import InlineSvg from 'vue-inline-svg';
-import type { Icon } from '@/types';
+import type { Components } from '@/types';
 
 describe('Icon', () => {
   it('renders a decorative icon', () => {
     // Arrange
-    const icon: Icon.Icon = {
+    const icon: Components.Icon.Icon = {
       src: new URL('@/docs/assets/duck.svg', import.meta.url).href
     };
-    const wrapper = shallowMount(JIcon, {
+    const wrapper = shallowMount(Icon, {
       props: { icon }
     });
 
@@ -25,11 +25,11 @@ describe('Icon', () => {
 
   it('renders an informative icon', () => {
     // Arrange
-    const icon: Icon.Icon = {
+    const icon: Components.Icon.Icon = {
       src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
       label: 'Duck'
     };
-    const wrapper = shallowMount(JIcon, {
+    const wrapper = shallowMount(Icon, {
       props: { icon }
     });
 

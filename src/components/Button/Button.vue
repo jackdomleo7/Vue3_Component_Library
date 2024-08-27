@@ -28,17 +28,17 @@
     }"
     :disabled="disabled"
   >
-    <JIcon v-if="icon && icon.position !== 'after-text'" :icon="icon" />
+    <Icon v-if="icon && icon.position !== 'after-text'" :icon="icon" />
     <slot v-if="icon?.position !== 'icon-only'" />
-    <JIcon v-if="icon && icon.position === 'after-text'" :icon="icon" />
+    <Icon v-if="icon && icon.position === 'after-text'" :icon="icon" />
   </component>
 </template>
 
 <script lang="ts" setup>
 import { computed, defineAsyncComponent, useSlots } from 'vue';
-import type { Button } from '@/types';
+import type { Components } from '@/types';
 
-const JIcon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
+const Icon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
 
 withDefaults(
   defineProps<{
@@ -52,9 +52,9 @@ withDefaults(
      * Provide a URL to use `<a :href="href">` instead of a `<button>`.
      */
     href?: string;
-    status?: Button.Status;
+    status?: Components.Button.Status;
     outline?: boolean;
-    icon?: Button.Icon;
+    icon?: Components.Button.Icon;
     disabled?: boolean;
   }>(),
   {

@@ -1,11 +1,12 @@
 import { shallowMount } from '@vue/test-utils';
-import { JButton, JIcon } from '@/index';
-import type { Button } from '@/types';
+import Button from './Button.vue';
+import Icon from '../Icon/Icon.vue';
+import type { Components } from '@/types';
 
 describe('Button', () => {
   it('renders a basic button', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       slots: {
         default: 'Click me'
       }
@@ -22,7 +23,7 @@ describe('Button', () => {
 
   it('renders a submit button', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       props: {
         type: 'submit'
       },
@@ -42,7 +43,7 @@ describe('Button', () => {
 
   it('renders a reset button', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       props: {
         type: 'reset'
       },
@@ -62,7 +63,7 @@ describe('Button', () => {
 
   it('renders a button as a link', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       slots: {
         default: 'Click me'
       },
@@ -81,7 +82,7 @@ describe('Button', () => {
 
   it('renders a button with a status', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       slots: {
         default: 'Click me'
       },
@@ -103,7 +104,7 @@ describe('Button', () => {
 
   it('renders a button with an outline', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       slots: {
         default: 'Click me'
       },
@@ -125,7 +126,7 @@ describe('Button', () => {
 
   it('renders a disabled button', () => {
     // Arrange
-    const wrapper = shallowMount(JButton, {
+    const wrapper = shallowMount(Button, {
       slots: {
         default: 'Click me'
       },
@@ -142,11 +143,11 @@ describe('Button', () => {
   describe('icon', () => {
     it('renders a button with an icon before the text', async () => {
       // Arrange
-      const icon: Button.Icon = {
+      const icon: Components.Button.Icon = {
         src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
         position: 'before-text'
       };
-      const wrapper = shallowMount(JButton, {
+      const wrapper = shallowMount(Button, {
         slots: {
           default: 'Click me'
         },
@@ -160,18 +161,18 @@ describe('Button', () => {
       // Assert
       expect(wrapper.find('button').exists()).toBe(true);
       expect(wrapper.find('button').classes()).toContain('j-btn--icon-before');
-      expect(wrapper.findComponent(JIcon).exists()).toBe(true);
+      expect(wrapper.findComponent(Icon).exists()).toBe(true);
       expect(wrapper.text()).toBe('Click me');
       expect(wrapper.find('button').attributes('title')).toBeUndefined();
     });
 
     it('renders a button with an icon after the text', async () => {
       // Arrange
-      const icon: Button.Icon = {
+      const icon: Components.Button.Icon = {
         src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
         position: 'after-text'
       };
-      const wrapper = shallowMount(JButton, {
+      const wrapper = shallowMount(Button, {
         slots: {
           default: 'Click me'
         },
@@ -185,18 +186,18 @@ describe('Button', () => {
       // Assert
       expect(wrapper.find('button').exists()).toBe(true);
       expect(wrapper.find('button').classes()).toContain('j-btn--icon-after');
-      expect(wrapper.findComponent(JIcon).exists()).toBe(true);
+      expect(wrapper.findComponent(Icon).exists()).toBe(true);
       expect(wrapper.text()).toBe('Click me');
       expect(wrapper.find('button').attributes('title')).toBeUndefined();
     });
 
     it('renders a button with only an icon', async () => {
       // Arrange
-      const icon: Button.Icon = {
+      const icon: Components.Button.Icon = {
         src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
         position: 'icon-only'
       };
-      const wrapper = shallowMount(JButton, {
+      const wrapper = shallowMount(Button, {
         slots: {
           default: 'Click me'
         },
@@ -210,7 +211,7 @@ describe('Button', () => {
       // Assert
       expect(wrapper.find('button').exists()).toBe(true);
       expect(wrapper.find('button').classes()).toContain('j-btn--icon-only');
-      expect(wrapper.findComponent(JIcon).exists()).toBe(true);
+      expect(wrapper.findComponent(Icon).exists()).toBe(true);
       expect(wrapper.text()).toBe('');
       expect(wrapper.find('button').attributes('title')).toBe('Click me');
     });

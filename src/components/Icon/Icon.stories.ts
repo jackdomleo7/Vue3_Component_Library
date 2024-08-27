@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import JIcon from './Icon.vue';
+import Icon from './Icon.vue';
 
 const meta = {
   title: 'Components/Icon',
-  component: JIcon,
-  tags: ['autodocs']
-} satisfies Meta<typeof JIcon>;
+  component: Icon
+} satisfies Meta<typeof Icon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

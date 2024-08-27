@@ -3,6 +3,7 @@
   <component
     :is="href ? 'a' : 'button'"
     :href="href"
+    :type="href ? undefined : type"
     class="j-btn"
     :title="icon?.position === 'icon-only' ? defaultSlotContent : undefined"
     :style="
@@ -39,13 +40,32 @@ import type { Button } from '@/types';
 
 const JIcon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
 
-defineProps<{
-  href?: string;
-  status?: Button.Status;
-  outline?: boolean;
-  icon?: Button.Icon;
-  disabled?: boolean;
-}>();
+withDefaults(
+  defineProps<{
+    /**
+     * The button type. _Is omitted if `href` has been provided._
+     * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#type
+     * @default "button"
+     */
+    type?: 'button' | 'submit' | 'reset';
+    /**
+     * Provide a URL to use `<a :href="href">` instead of a `<button>`.
+     */
+    href?: string;
+    status?: Button.Status;
+    outline?: boolean;
+    icon?: Button.Icon;
+    disabled?: boolean;
+  }>(),
+  {
+    type: 'button',
+    href: undefined,
+    status: undefined,
+    outline: false,
+    icon: undefined,
+    disabled: false
+  }
+);
 
 const defaultSlotContent = computed<string>(() => {
   const $default = useSlots()['default']!;

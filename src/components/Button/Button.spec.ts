@@ -17,6 +17,47 @@ describe('Button', () => {
     expect(wrapper.attributes('href')).toBeUndefined();
     expect(wrapper.text()).toBe('Click me');
     expect(wrapper.find('button').attributes('title')).toBeUndefined();
+    expect(wrapper.find('button').attributes('type')).toBe('button');
+  });
+
+  it('renders a submit button', () => {
+    // Arrange
+    const wrapper = shallowMount(JButton, {
+      props: {
+        type: 'submit'
+      },
+      slots: {
+        default: 'Click me'
+      }
+    });
+
+    // Assert
+    expect(wrapper.find('button').exists()).toBe(true);
+    expect(wrapper.find('a').exists()).toBe(false);
+    expect(wrapper.attributes('href')).toBeUndefined();
+    expect(wrapper.text()).toBe('Click me');
+    expect(wrapper.find('button').attributes('title')).toBeUndefined();
+    expect(wrapper.find('button').attributes('type')).toBe('submit');
+  });
+
+  it('renders a reset button', () => {
+    // Arrange
+    const wrapper = shallowMount(JButton, {
+      props: {
+        type: 'reset'
+      },
+      slots: {
+        default: 'Click me'
+      }
+    });
+
+    // Assert
+    expect(wrapper.find('button').exists()).toBe(true);
+    expect(wrapper.find('a').exists()).toBe(false);
+    expect(wrapper.attributes('href')).toBeUndefined();
+    expect(wrapper.text()).toBe('Click me');
+    expect(wrapper.find('button').attributes('title')).toBeUndefined();
+    expect(wrapper.find('button').attributes('type')).toBe('reset');
   });
 
   it('renders a button as a link', () => {
@@ -34,6 +75,7 @@ describe('Button', () => {
     expect(wrapper.find('button').exists()).toBe(false);
     expect(wrapper.find('a').exists()).toBe(true);
     expect(wrapper.find('a').attributes('href')).toBe('https://www.test.com');
+    expect(wrapper.find('a').attributes('type')).toBeUndefined();
     expect(wrapper.text()).toBe('Click me');
   });
 

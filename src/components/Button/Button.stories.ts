@@ -7,6 +7,10 @@ const meta = {
   component: JButton,
   tags: ['autodocs'],
   argTypes: {
+    type: {
+      control: 'radio',
+      options: [undefined, 'button', 'submit', 'reset']
+    },
     status: {
       control: 'radio',
       options: [undefined, 'accent', 'info', 'error', 'warning', 'success']

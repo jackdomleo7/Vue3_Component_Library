@@ -1,5 +1,4 @@
 import { type PropType } from './vue/dist/vue.esm-bundler.js';
-import type { Icon } from '../../types';
 declare const _default: import('./vue/dist/vue.esm-bundler.js').DefineComponent<{
     icon: {
         type: PropType<Icon.Icon>;

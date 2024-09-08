@@ -22,7 +22,8 @@ export default defineConfig({
       targets: [{ src: './src/types.d.ts', dest: './dist' }]
     }),
     dts({
-      exclude: ['**/*.spec.ts', '**/*.stories.ts']
+      exclude: ['**/*.spec.ts', '**/*.stories.ts'],
+      insertTypesEntry: true
     })
   ],
   build: {

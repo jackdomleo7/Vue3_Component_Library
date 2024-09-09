@@ -1,3 +1,13 @@
+export namespace Utilities {
+  export type Prefix<Prefix extends string, T extends string> = `${Prefix}${T}`;
+  export type Suffix<T extends string, Suffix extends string> = `${T}${Suffix}`;
+}
+
+export namespace Tokens {
+  export type FontSizeValue = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  export type FontSize = Utilities.Prefix<'text-', Tokens.FontSizeValue>;
+}
+
 export namespace Components {
   export namespace Button {
     export type Tag = 'button' | 'a' | 'router-link';

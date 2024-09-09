@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import Button from './Button.vue';
 import Icon from '../Icon/Icon.vue';
-import type { Components } from '@/types';
+import type { Components, Tokens } from '@/types';
 
 describe('Button', () => {
   it('renders a basic button', () => {
@@ -163,6 +163,46 @@ describe('Button', () => {
     expect(wrapper.find('button').exists()).toBe(true);
     expect(wrapper.find('button').attributes()).toHaveProperty('disabled');
   });
+
+  it.each<Tokens.FontSizeValue>(['xs', 'sm', 'md', 'lg', 'xl', 'xxl'])(
+    'renders size: %s',
+    (size) => {
+      // Arrange
+      const wrapper = shallowMount(Button, {
+        slots: {
+          default: 'Click me'
+        },
+        props: {
+          size
+        }
+      });
+
+      // Assert
+      expect(wrapper.find('button').attributes('style')).toContain(
+        `--j-btn-font-size: var(--j-text-${size})`
+      );
+    }
+  );
+
+  it.each<undefined | boolean>([undefined, true, false])(
+    'roundness: %s',
+    (round) => {
+      // Arrange
+      const wrapper = shallowMount(Button, {
+        slots: {
+          default: 'Click me'
+        },
+        props: {
+          round
+        }
+      });
+
+      // Assert
+      expect(wrapper.find('button').attributes('style')).toContain(
+        `--j-btn-border-radius: ${round === true ? '2rem' : '0.5rem'}`
+      );
+    }
+  );
 
   describe('icon', () => {
     it('renders a button with an icon before the text', async () => {

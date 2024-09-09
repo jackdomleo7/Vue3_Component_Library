@@ -6,6 +6,10 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
+    tag: {
+      control: 'radio',
+      options: [undefined, 'button', 'a', 'router-link']
+    },
     type: {
       control: 'radio',
       options: [undefined, 'button', 'submit', 'reset']
@@ -13,18 +17,16 @@ const meta = {
     status: {
       control: 'radio',
       options: [undefined, 'accent', 'info', 'error', 'warning', 'success']
+    },
+    size: {
+      control: 'radio',
+      options: [undefined, 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']
     }
   }
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  args: {
-    default: 'Click me'
-  }
-};
 
 export const Status: Story = {
   args: {
@@ -38,6 +40,22 @@ export const Outline: Story = {
     default: 'Click me',
     status: 'info',
     outline: true
+  }
+};
+
+export const Size: Story = {
+  args: {
+    default: 'Click me',
+    status: 'info',
+    size: 'xxl'
+  }
+};
+
+export const Round: Story = {
+  args: {
+    default: 'Click me',
+    status: 'info',
+    round: true
   }
 };
 

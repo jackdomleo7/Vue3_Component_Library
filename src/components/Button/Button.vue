@@ -7,20 +7,22 @@
     :type="tag === 'button' ? type : undefined"
     class="j-btn"
     :title="icon?.position === 'icon-only' ? defaultSlotContent : undefined"
-    :style="
-      status
+    :style="{
+      '--j-btn-font-size': `var(--j-text-${size})`,
+      '--j-btn-border-radius': round ? '2rem' : '0.5rem',
+      ...(status
         ? outline
-          ? `
-            --j-btn-color: var(--j-${status});
-            --j-btn-border-color: var(--j-${status})
-          `
-          : `
-            --j-btn-color: #fff;
-            --j-btn-background-color: var(--j-${status});
-            --j-btn-border-color: var(--j-${status})
-          `
-        : ''
-    "
+          ? {
+              '--j-btn-color': `var(--j-${status})`,
+              '--j-btn-border-color': `var(--j-${status})`
+            }
+          : {
+              '--j-btn-color': '#fff',
+              '--j-btn-background-color': `var(--j-${status})`,
+              '--j-btn-border-color': `var(--j-${status})`
+            }
+        : {})
+    }"
     :class="{
       'j-btn--status': status,
       'j-btn--icon-only': icon?.position === 'icon-only',
@@ -37,7 +39,7 @@
 
 <script lang="ts" setup>
 import { computed, defineAsyncComponent, useSlots } from 'vue';
-import type { Components } from '@/types';
+import type { Components, Tokens } from '@/types';
 
 const Icon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
 
@@ -58,6 +60,8 @@ withDefaults(
      * _Ignored if `<button>`._
      */
     href?: string;
+    size?: Tokens.FontSizeValue;
+    round?: boolean;
     status?: Components.Button.Status;
     outline?: boolean;
     icon?: Components.Button.Icon;
@@ -67,6 +71,7 @@ withDefaults(
     tag: 'button',
     type: 'button',
     href: undefined,
+    size: 'md',
     status: undefined,
     icon: undefined
   }
@@ -82,22 +87,22 @@ const defaultSlotContent = computed<string>(() => {
 
 <style lang="scss" scoped>
 .j-btn {
-  --j-btn-height: 2.5rem;
   --j-btn-background-color: transparent;
   --j-btn-border-color: transparent;
   --j-btn-color: var(--j-primary);
+  --j-btn-height: calc(var(--j-btn-font-size) * 2.5);
 
   background-color: var(--j-btn-background-color);
   border: 2px solid var(--j-btn-border-color);
   color: var(--j-btn-color);
   text-decoration: none;
   padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--j-btn-border-radius);
   cursor: pointer;
   outline-offset: 4px;
   height: var(--j-btn-height);
   line-height: 1;
-  font-size: inherit;
+  font-size: var(--j-btn-font-size);
   min-width: calc(var(--j-btn-height) * 2.25);
   display: inline-flex;
   align-items: center;

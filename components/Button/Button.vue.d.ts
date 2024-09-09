@@ -1,55 +1,69 @@
-import type { Components } from '../../types';
+import type { Components, Tokens } from '../../types';
 declare const _default: __VLS_WithTemplateSlots<import('./vue/dist/vue.esm-bundler.js').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
     /**
-     * The button type. _Is omitted if `href` has been provided._
+     * The element to use.
+     * @default "<button>"
+     */
+    tag?: Components.Button.Tag | undefined;
+    /**
+     * The button type. _Ignored if not `<button>`._
      * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#type
      * @default "button"
      */
-    type?: "button" | "submit" | "reset" | undefined;
+    type?: Components.Button.Type | undefined;
     /**
-     * Provide a URL to use `<a :href="href">` instead of a `<button>`.
+     * _Ignored if `<button>`._
      */
     href?: string | undefined;
+    size?: Tokens.FontSizeValue | undefined;
+    round?: boolean | undefined;
     status?: Components.Button.Status | undefined;
     outline?: boolean | undefined;
     icon?: Components.Button.Icon | undefined;
     disabled?: boolean | undefined;
 }>, {
+    tag: string;
     type: string;
     href: undefined;
+    size: string;
     status: undefined;
-    outline: boolean;
     icon: undefined;
-    disabled: boolean;
 }>, {}, unknown, {}, {}, import('./vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, import('./vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, {}, string, import('./vue/dist/vue.esm-bundler.js').VNodeProps & import('./vue/dist/vue.esm-bundler.js').AllowedComponentProps & import('./vue/dist/vue.esm-bundler.js').ComponentCustomProps, Readonly<import('./vue/dist/vue.esm-bundler.js').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
     /**
-     * The button type. _Is omitted if `href` has been provided._
+     * The element to use.
+     * @default "<button>"
+     */
+    tag?: Components.Button.Tag | undefined;
+    /**
+     * The button type. _Ignored if not `<button>`._
      * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#type
      * @default "button"
      */
-    type?: "button" | "submit" | "reset" | undefined;
+    type?: Components.Button.Type | undefined;
     /**
-     * Provide a URL to use `<a :href="href">` instead of a `<button>`.
+     * _Ignored if `<button>`._
      */
     href?: string | undefined;
+    size?: Tokens.FontSizeValue | undefined;
+    round?: boolean | undefined;
     status?: Components.Button.Status | undefined;
     outline?: boolean | undefined;
     icon?: Components.Button.Icon | undefined;
     disabled?: boolean | undefined;
 }>, {
+    tag: string;
     type: string;
     href: undefined;
+    size: string;
     status: undefined;
-    outline: boolean;
     icon: undefined;
-    disabled: boolean;
 }>>>, {
     icon: Components.Button.Icon;
-    type: "button" | "submit" | "reset";
+    type: Components.Button.Type;
+    size: Tokens.FontSizeValue;
+    tag: Components.Button.Tag;
     href: string;
     status: Components.Button.Status;
-    outline: boolean;
-    disabled: boolean;
 }, {}>, {
     default?(_: {}): any;
 }>;

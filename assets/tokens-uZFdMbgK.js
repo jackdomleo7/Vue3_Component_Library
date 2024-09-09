@@ -1,5 +1,5 @@
-import{j as e}from"./jsx-runtime-v3l72pKv.js";import{M as c,T as l}from"./index-b27-Qpcf.js";import{u as i}from"./index-6hB1MXCO.js";import"./iframe-eXSGPx_v.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-5-cIlDoe.js";import"./index-ogXoivrg.js";import"./index-OpicemMp.js";import"./index-PPLHz8o0.js";function r(s){const n=Object.assign({p:"p",a:"a",code:"code",h2:"h2",ul:"ul",li:"li",pre:"pre",h3:"h3"},i(),s.components);return e.jsxs(e.Fragment,{children:[e.jsx(c,{title:"Setup/Tokens"}),`
-`,e.jsx(l,{children:"Tokens"}),`
+import{j as e}from"./jsx-runtime-Se5HoqkA.js";import{M as l,T as c}from"./index-YrSrXbzC.js";import{u as i}from"./index-3dJxQm_V.js";import"./iframe-tacJft0L.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-5-cIlDoe.js";import"./index-ogXoivrg.js";import"./index-OpicemMp.js";import"./index-PPLHz8o0.js";function r(s){const n=Object.assign({p:"p",a:"a",code:"code",h2:"h2",ul:"ul",li:"li",pre:"pre",h3:"h3"},i(),s.components);return e.jsxs(e.Fragment,{children:[e.jsx(l,{title:"Setup/Tokens"}),`
+`,e.jsx(c,{children:"Tokens"}),`
 `,e.jsxs(n.p,{children:["Tokens are globally accessible properties (represented as ",e.jsx(n.a,{href:"https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties",target:"_blank",rel:"nofollow noopener noreferrer",children:"CSS Custom Properties"}),") that define the design system. This design system, by default, is shipped with tokens that are designed to be simplistic, minimalistic, and customisable. The default colours are specifically chosen to be accessible across light and dark themes."]}),`
 `,e.jsxs(n.p,{children:["All tokens are prefixed with ",e.jsx(n.code,{children:"--j-"}),": e.g. ",e.jsx(n.code,{children:"error"})," will be represented as ",e.jsx(n.code,{children:"--j-error"}),"."]}),`
 `,e.jsx(n.h2,{id:"default-tokens-light-theme",children:"Default Tokens (light theme)"}),`
@@ -17,6 +17,12 @@ import{j as e}from"./jsx-runtime-v3l72pKv.js";import{M as c,T as l}from"./index-
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"secondary"}),": ",e.jsx(n.code,{children:"#2f2f2f"})]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"tertiary"}),": ",e.jsx(n.code,{children:"#323232"})]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"link"}),": ",e.jsx("code",{style:{color:"var(--j-link)"},children:"#2680eb"})]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"text-xs"}),": ",e.jsx("span",{style:{fontSize:"0.75rem"},children:"0.75rem"})]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"text-sm"}),": ",e.jsx("span",{style:{fontSize:"0.875rem"},children:"0.875rem"})]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"text-md"}),": ",e.jsx("span",{style:{fontSize:"1rem"},children:"1rem"})]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"text-lg"}),": ",e.jsx("span",{style:{fontSize:"1.125rem"},children:"1.125rem"})]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"text-xl"}),": ",e.jsx("span",{style:{fontSize:"1.25rem"},children:"1.25rem"})]}),`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"text-xxl"}),": ",e.jsx("span",{style:{fontSize:"1.5rem"},children:"1.5rem"})]}),`
 `]}),`
 `,e.jsx(n.h2,{id:"customisation",children:"Customisation"}),`
 `,e.jsxs(n.p,{children:["You can easily customise tokens by defining a new SCSS ",e.jsx(n.code,{children:"$tokens"})," map when importing the global SCSS."]}),`
@@ -34,7 +40,12 @@ import{j as e}from"./jsx-runtime-v3l72pKv.js";import{M as c,T as l}from"./index-
       'primary': #fff,
       'secondary': #fff,
       'tertiary': #fff,
-      'link': #fff
+      'link': #fff,
+      'text-xs': 1rem,
+      'text-sm': 1rem. 'text-md': 1rem,
+      'text-lg': 1rem,
+      'text-xl': 1rem,
+      'text-xxl': 1rem
     )
   )
 );

@@ -76,6 +76,7 @@ export const IconOnly: Story = {
 
 export const Link: Story = {
   args: {
+    tag: 'a',
     default: 'Click me',
     status: 'info',
     href: '#'

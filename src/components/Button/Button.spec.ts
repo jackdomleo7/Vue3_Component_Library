@@ -68,6 +68,7 @@ describe('Button', () => {
         default: 'Click me'
       },
       props: {
+        tag: 'a',
         href: 'https://www.test.com'
       }
     });
@@ -77,6 +78,29 @@ describe('Button', () => {
     expect(wrapper.find('a').exists()).toBe(true);
     expect(wrapper.find('a').attributes('href')).toBe('https://www.test.com');
     expect(wrapper.find('a').attributes('type')).toBeUndefined();
+    expect(wrapper.text()).toBe('Click me');
+  });
+
+  it('renders a button as a router-link', () => {
+    // Arrange
+    const wrapper = shallowMount(Button, {
+      slots: {
+        default: 'Click me'
+      },
+      props: {
+        tag: 'router-link',
+        href: 'https://www.test.com'
+      }
+    });
+
+    // Assert
+    expect(wrapper.find('button').exists()).toBe(false);
+    expect(wrapper.find('a').exists()).toBe(false);
+    expect(wrapper.find('router-link').exists()).toBe(true);
+    expect(wrapper.find('router-link').attributes('href')).toBe(
+      'https://www.test.com'
+    );
+    expect(wrapper.find('router-link').attributes('type')).toBeUndefined();
     expect(wrapper.text()).toBe('Click me');
   });
 

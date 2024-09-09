@@ -1,6 +1,8 @@
 export namespace Components {
   export namespace Button {
+    export type Tag = 'button' | 'a' | 'router-link';
     export type Status = 'accent' | 'info' | 'error' | 'warning' | 'success';
+    export type Type = 'button' | 'submit' | 'reset';
 
     export interface Icon extends Icon.Icon {
       position: 'before-text' | 'after-text' | 'icon-only';

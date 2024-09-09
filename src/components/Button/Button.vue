@@ -1,9 +1,10 @@
 <template>
-  <!-- TODO: Add support for router-link -->
+  <!-- TODO: Add support for nuxt-link -->
   <component
-    :is="href ? 'a' : 'button'"
+    :is="tag"
+    :to="tag === 'router-link' ? href : undefined"
     :href="href"
-    :type="href ? undefined : type"
+    :type="tag === 'button' ? type : undefined"
     class="j-btn"
     :title="icon?.position === 'icon-only' ? defaultSlotContent : undefined"
     :style="
@@ -43,13 +44,18 @@ const Icon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
 withDefaults(
   defineProps<{
     /**
-     * The button type. _Is omitted if `href` has been provided._
+     * The element to use.
+     * @default "<button>"
+     */
+    tag?: Components.Button.Tag;
+    /**
+     * The button type. _Ignored if not `<button>`._
      * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#type
      * @default "button"
      */
-    type?: 'button' | 'submit' | 'reset';
+    type?: Components.Button.Type;
     /**
-     * Provide a URL to use `<a :href="href">` instead of a `<button>`.
+     * _Ignored if `<button>`._
      */
     href?: string;
     status?: Components.Button.Status;
@@ -58,12 +64,11 @@ withDefaults(
     disabled?: boolean;
   }>(),
   {
+    tag: 'button',
     type: 'button',
     href: undefined,
     status: undefined,
-    outline: false,
-    icon: undefined,
-    disabled: false
+    icon: undefined
   }
 );
 

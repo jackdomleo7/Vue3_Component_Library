@@ -18,7 +18,13 @@ $j-globals: (
   'grey-600': #3e3e3e,
   'grey-700': #323232,
   'grey-800': #2f2f2f,
-  'grey-900': #252525
+  'grey-900': #252525,
+  'text-xs': 0.75rem,
+  'text-sm': 0.875rem,
+  'text-md': 1rem,
+  'text-lg': 1.125rem,
+  'text-xl': 1.25rem,
+  'text-xxl': 1.5rem
 );
 
 /**
@@ -38,7 +44,13 @@ $tokens: (
     'primary': map.get($j-globals, 'grey-900'),
     'secondary': map.get($j-globals, 'grey-800'),
     'tertiary': map.get($j-globals, 'grey-700'),
-    'link': map.get($j-globals, 'blue')
+    'link': map.get($j-globals, 'blue'),
+    'text-xs': map.get($j-globals, 'text-xs'),
+    'text-sm': map.get($j-globals, 'text-sm'),
+    'text-md': map.get($j-globals, 'text-md'),
+    'text-lg': map.get($j-globals, 'text-lg'),
+    'text-xl': map.get($j-globals, 'text-xl'),
+    'text-xxl': map.get($j-globals, 'text-xxl')
   ),
   'j-dark': (
     'font-family': map.get($j-globals, 'font-family'),
@@ -53,7 +65,13 @@ $tokens: (
     'primary': map.get($j-globals, 'grey-50'),
     'secondary': map.get($j-globals, 'grey-200'),
     'tertiary': map.get($j-globals, 'grey-400'),
-    'link': map.get($j-globals, 'blue')
+    'link': map.get($j-globals, 'blue'),
+    'text-xs': map.get($j-globals, 'text-xs'),
+    'text-sm': map.get($j-globals, 'text-sm'),
+    'text-md': map.get($j-globals, 'text-md'),
+    'text-lg': map.get($j-globals, 'text-lg'),
+    'text-xl': map.get($j-globals, 'text-xl'),
+    'text-xxl': map.get($j-globals, 'text-xxl')
   )
 ) !default;
 

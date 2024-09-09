@@ -47,7 +47,7 @@ import ${componentName} from './${componentName}.vue'
 const meta = {
   title: 'Components/${componentName}',
   component: ${componentName}
-} satisfies Meta<typeof ${prefixedComponentName}>
+} satisfies Meta<typeof ${componentName}>
 
 export default meta
 type Story = StoryObj<typeof meta>

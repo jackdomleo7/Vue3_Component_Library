@@ -19,12 +19,12 @@
           : {
               '--j-btn-color': '#fff',
               '--j-btn-background-color': `var(--j-${status})`,
-              '--j-btn-border-color': `var(--j-${status})`
+              '--j-btn-border-color': `var(--j-${status})`,
+              '--j-btn-hover-background-color': `var(--j-${status}-alt)`
             }
         : {})
     }"
     :class="{
-      'j-btn--status': status,
       'j-btn--icon-only': icon?.position === 'icon-only',
       'j-btn--icon-before': icon?.position === 'before-text',
       'j-btn--icon-after': icon?.position === 'after-text'
@@ -90,6 +90,7 @@ const defaultSlotContent = computed<string>(() => {
   --j-btn-background-color: transparent;
   --j-btn-border-color: transparent;
   --j-btn-color: var(--j-primary);
+  --j-btn-hover-background-color: var(--j-bg1);
   --j-btn-height: calc(var(--j-btn-font-size) * 2.5);
 
   background-color: var(--j-btn-background-color);
@@ -120,21 +121,12 @@ const defaultSlotContent = computed<string>(() => {
   &:not(:disabled) {
     &:hover,
     &:active {
-      background-color: var(--j-bg1);
+      background-color: var(--j-btn-hover-background-color);
     }
 
     &:active {
       @media (prefers-reduced-motion: no-preference) {
         transform: scale(0.98);
-      }
-    }
-  }
-
-  &--status {
-    &:not(:disabled) {
-      &:hover,
-      &:active {
-        background-color: var(--j-btn-background-color);
       }
     }
   }

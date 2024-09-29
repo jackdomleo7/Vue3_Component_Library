@@ -117,12 +117,14 @@ describe('Button', () => {
 
     // Assert
     expect(wrapper.find('button').exists()).toBe(true);
-    expect(wrapper.find('button').classes()).toContain('j-btn--status');
     expect(wrapper.find('button').attributes('style')).toContain(
       '--j-btn-background-color: var(--j-accent)'
     );
     expect(wrapper.find('button').attributes('style')).toContain(
       '--j-btn-border-color: var(--j-accent)'
+    );
+    expect(wrapper.find('button').attributes('style')).toContain(
+      '--j-btn-hover-background-color: var(--j-accent-alt)'
     );
   });
 

@@ -103,9 +103,11 @@ const defaultSlotContent = computed<string>(() => {
   height: var(--j-btn-height);
   line-height: 1;
   font-size: var(--j-btn-font-size);
+  text-align: center;
   min-width: calc(var(--j-btn-height) * 2.25);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   user-select: none;
   position: relative;

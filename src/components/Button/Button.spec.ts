@@ -126,6 +126,9 @@ describe('Button', () => {
     expect(wrapper.find('button').attributes('style')).toContain(
       '--j-btn-hover-background-color: var(--j-accent-alt)'
     );
+    expect(wrapper.find('button').attributes('style')).toContain(
+      '--j-btn-hover-border-color: var(--j-accent-alt)'
+    );
   });
 
   it('renders a button with an outline', () => {

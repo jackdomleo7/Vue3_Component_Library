@@ -20,7 +20,8 @@
               '--j-btn-color': '#fff',
               '--j-btn-background-color': `var(--j-${status})`,
               '--j-btn-border-color': `var(--j-${status})`,
-              '--j-btn-hover-background-color': `var(--j-${status}-alt)`
+              '--j-btn-hover-background-color': `var(--j-${status}-alt)`,
+              '--j-btn-hover-border-color': `var(--j-${status}-alt)`
             }
         : {})
     }"
@@ -122,6 +123,7 @@ const defaultSlotContent = computed<string>(() => {
     &:hover,
     &:active {
       background-color: var(--j-btn-hover-background-color);
+      border-color: var(--j-btn-hover-border-color);
     }
 
     &:active {

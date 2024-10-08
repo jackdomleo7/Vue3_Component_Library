@@ -1,0 +1,43 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+<Meta title="Docs/Typography" />
+
+export const typography = {
+  type: {
+    primary: 'Arial, sans-serif',
+  },
+  weight: {
+    regular: '400',
+    bold: '700'
+  },
+  size: {
+    'text-xs': 12,
+    'text-sm': 14,
+    'text-md': 16,
+    'text-lg': 18,
+    'text-xl': 20,
+    'text-xxl': 24
+  },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+# Typography
+
+**Font:** Arial
+
+**Weights:** 400(regular), 700(bold)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size['text-xs']),
+    Number(typography.size['text-sm']),
+    Number(typography.size['text-md']),
+    Number(typography.size['text-lg']),
+    Number(typography.size['text-xl']),
+    Number(typography.size['text-xxl'])
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

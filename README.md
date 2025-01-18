@@ -8,7 +8,7 @@ A Vue3 component library for my own enjoyment, learning, & development <small>(f
 
 ## Tech Stack
 
-**Client:** Vue3, Vite, TypeScript, Vitest, Storybook, Rollup, pnpm, ESLint, Prettier, Stylelint
+**Client:** Vue3, Vite, TypeScript, Vitest, Storybook, Rollup, pnpm
 
 ## Installation
 
@@ -79,18 +79,6 @@ Build the project
 
 ```bash
   pnpm run build
-```
-
-Check linting & formatting
-
-```bash
-  pnpm run lint:check
-```
-
-Fix linting & formatting
-
-```bash
-  pnpm run lint:fix
 ```
 
 Run test suite in a single run

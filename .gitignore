@@ -14,8 +14,6 @@ docs
 dist-ssr
 *.local
 *.tgz
-.eslintcache
-.stylelintcache
 coverage
 
 # Editor directories and files

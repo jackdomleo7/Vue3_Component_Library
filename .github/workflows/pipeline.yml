@@ -34,9 +34,6 @@ jobs:
       - name: Check docs can build successfully
         run: pnpm run build:docs
 
-      - name: Check project linting
-        run: pnpm run lint:check
-
       - name: Run unit test
         run: pnpm run test
 

@@ -59,7 +59,7 @@ export default defineConfig({
       all: true,
       include: ['src/components/**/*.vue']
     },
-    clearMocks: true,
+    restoreMocks: true,
     setupFiles: ['./vitest.setup.ts']
   }
 });

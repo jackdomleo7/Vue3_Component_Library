@@ -30,7 +30,7 @@
     "build": "rimraf dist && vite build",
     "lint:check": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache . && prettier --check --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --cache --max-warnings=0",
     "lint:fix": "eslint --ext .ts,.js,.vue --ignore-path .gitignore --max-warnings=0 --cache --fix . && prettier --write --ignore-unknown --cache . && stylelint src/**/*.{css,scss,vue} --fix --cache --max-warnings=0",
-    "test": "vitest run --coverage",
+    "test": "vitest run",
     "test:report": "open-cli ./coverage/index.html",
     "new-component": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./newComponent.ps1"
   },

@@ -54,6 +54,7 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     coverage: {
+      enabled: true,
       reporter: ['text', 'json', 'html'],
       all: true,
       include: ['src/components/**/*.vue']

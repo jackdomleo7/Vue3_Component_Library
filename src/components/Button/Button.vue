@@ -162,7 +162,7 @@ const defaultSlotContent = computed<string>(() => {
 
   :deep(svg) {
     fill: var(--j-btn-color);
-    height: 75%;
+    height: 60%;
     width: auto;
     position: absolute;
   }

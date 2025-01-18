@@ -213,7 +213,7 @@ describe('Button', () => {
     it('renders a button with an icon before the text', async () => {
       // Arrange
       const icon: Components.Button.Icon = {
-        src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
+        src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
         position: 'before-text'
       };
       const wrapper = shallowMount(Button, {
@@ -238,7 +238,7 @@ describe('Button', () => {
     it('renders a button with an icon after the text', async () => {
       // Arrange
       const icon: Components.Button.Icon = {
-        src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
+        src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
         position: 'after-text'
       };
       const wrapper = shallowMount(Button, {
@@ -263,7 +263,7 @@ describe('Button', () => {
     it('renders a button with only an icon', async () => {
       // Arrange
       const icon: Components.Button.Icon = {
-        src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
+        src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
         position: 'icon-only'
       };
       const wrapper = shallowMount(Button, {

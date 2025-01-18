@@ -7,7 +7,7 @@ describe('Icon', () => {
   it('renders a decorative icon', () => {
     // Arrange
     const icon: Components.Icon.Icon = {
-      src: new URL('@/docs/assets/duck.svg', import.meta.url).href
+      src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href
     };
     const wrapper = shallowMount(Icon, {
       props: { icon }
@@ -26,8 +26,8 @@ describe('Icon', () => {
   it('renders an informative icon', () => {
     // Arrange
     const icon: Components.Icon.Icon = {
-      src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
-      label: 'Duck'
+      src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
+      label: 'ChevronRight'
     };
     const wrapper = shallowMount(Icon, {
       props: { icon }
@@ -39,7 +39,7 @@ describe('Icon', () => {
       'false'
     );
     expect(wrapper.findComponent(InlineSvg).attributes('aria-label')).toBe(
-      'Duck'
+      'ChevronRight'
     );
   });
 });

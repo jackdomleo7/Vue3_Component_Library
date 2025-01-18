@@ -64,7 +64,7 @@ export const IconBefore: Story = {
     default: 'Click me',
     status: 'info',
     icon: {
-      src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
+      src: new URL('@/docs/assets/ChevronLeft.svg', import.meta.url).href,
       position: 'before-text'
     }
   }
@@ -75,7 +75,7 @@ export const IconAfter: Story = {
     default: 'Click me',
     status: 'info',
     icon: {
-      src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
+      src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
       position: 'after-text'
     }
   }
@@ -86,7 +86,7 @@ export const IconOnly: Story = {
     default: 'Click me',
     status: 'info',
     icon: {
-      src: new URL('@/docs/assets/duck.svg', import.meta.url).href,
+      src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
       position: 'icon-only'
     }
   }

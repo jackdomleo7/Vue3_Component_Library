@@ -1,3 +1,17 @@
+# Unit tests
+coverage
+
+# Storybook
+docs
+!src/docs
+
+# Dist
+dist
+
+# Node
+node_modules
+*.tgz
+
 # Logs
 logs
 *.log
@@ -6,15 +20,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-node_modules
-dist
-docs
-!src/docs
-dist-ssr
-*.local
-*.tgz
-coverage
 
 # Editor directories and files
 .vscode/*

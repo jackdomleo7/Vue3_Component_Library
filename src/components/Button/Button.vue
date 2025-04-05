@@ -47,7 +47,7 @@ const Icon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
 withDefaults(
   defineProps<{
     /**
-     * The element to use.
+     * The HTML element to use.
      * @default "<button>"
      */
     tag?: Components.Button.Tag;

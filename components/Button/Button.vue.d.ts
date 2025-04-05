@@ -1,7 +1,7 @@
 import { Components, Tokens } from '../../types';
 type __VLS_Props = {
     /**
-     * The element to use.
+     * The HTML element to use.
      * @default "<button>"
      */
     tag?: Components.Button.Tag;
@@ -37,7 +37,10 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}
     size: Tokens.FontSizeValue;
     tag: Components.Button.Tag;
     href: string;
+    round: boolean;
     status: Components.Button.Status;
+    outline: boolean;
+    disabled: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;

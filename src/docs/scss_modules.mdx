@@ -1,0 +1,25 @@
+import { Meta, Title } from '@storybook/blocks';
+
+<Meta title="Docs/SCSS Modules" />
+
+<Title>SCSS Modules</Title>
+
+This library comes with a set of SCSS modules that you can `@use` into your project. These do not come bundled as default, they need to be imported manually.
+
+
+## `_sr-only.scss`
+
+```ts
+@use '@jackdomleo7/vue3-library/src/styles/modules/sr-only' as *;
+```
+
+This module contains 2 classes that can be used to hide elements visually but keep them accessible to screen readers.
+
+- `.sr-only`: Hides the element visually but keeps it accessible to screen readers.
+- `.sr-only--focusable`: Hides the element visually but keeps it accessible to screen readers. It will be visible when focused.
+
+```html
+<button class="icon-only"><span class="sr-only">Close</span> &times;</button>
+
+<button class="sr-only--focusable">Skip to main content</button>
+```

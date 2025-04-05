@@ -5,7 +5,6 @@ export namespace Utilities {
 
 export namespace Tokens {
   export type FontSizeValue = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
-  export type FontSize = Utilities.Prefix<'text-', Tokens.FontSizeValue>;
 }
 
 export namespace Components {

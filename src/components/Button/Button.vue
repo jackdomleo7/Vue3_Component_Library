@@ -73,8 +73,11 @@ withDefaults(
     type: 'button',
     href: undefined,
     size: 'md',
+    round: false,
     status: undefined,
-    icon: undefined
+    outline: false,
+    icon: undefined,
+    disabled: false
   }
 );
 

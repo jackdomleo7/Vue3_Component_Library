@@ -4,7 +4,14 @@ import Icon from './Icon.vue';
 
 const meta = {
   title: 'Components/Icon',
-  component: Icon
+  component: Icon,
+  render: (args) => ({
+    components: { Icon },
+    setup() {
+      return { args };
+    },
+    template: '<Icon v-bind="args" style="max-width: 4rem;" />'
+  })
 } satisfies Meta<typeof Icon>;
 
 export default meta;
@@ -21,8 +28,8 @@ export const Decorative: Story = {
 export const Informative: Story = {
   args: {
     icon: {
-      src: new URL('@/docs/assets/ChevronRight.svg', import.meta.url).href,
-      label: 'ChevronRight'
+      src: new URL('@/docs/assets/ErrorExclamation.svg', import.meta.url).href,
+      label: 'Error'
     }
   }
 };

@@ -1,0 +1,24 @@
+import { Meta, Title, Story, Source, DocsStory } from '@storybook/blocks';
+import * as IconStories from './Icon.stories';
+
+<Meta title="Components/Icon" of={IconStories} />
+
+<Title>Icon</Title>
+
+```ts
+import Icon from '@jackdomleo7/vue3-library/components/Icon/Icon.vue';
+```
+
+Render an inline SVG.
+
+## Decorative
+
+Render a decorative icon with no semantic meaning. This is useful for icons that are purely decorative and do not convey any information to the user.
+
+<DocsStory of={IconStories.Decorative} />
+
+## Informative
+
+Render an informative icon with semantic meaning. This is useful for icons that convey information to the user, such as a warning or error icon. This will render an `aria-label` attribute to describe the icon to assistive technologies.
+
+<DocsStory of={IconStories.Informative} />

@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:string';
+@use 'sass:color';
 
 $j-globals: (
   'font-family': 'Arial, sans-serif',
@@ -34,15 +35,15 @@ $tokens: (
   'j-default': (
     'font-family': map.get($j-globals, 'font-family'),
     'accent': map.get($j-globals, 'accent'),
-    'accent-alt': mix(map.get($j-globals, 'accent'), #000, 90%),
+    'accent-alt': color.mix(map.get($j-globals, 'accent'), #000, 90%),
     'info': map.get($j-globals, 'blue'),
-    'info-alt': mix(map.get($j-globals, 'blue'), #000, 90%),
+    'info-alt': color.mix(map.get($j-globals, 'blue'), #000, 90%),
     'error': map.get($j-globals, 'red'),
-    'error-alt': mix(map.get($j-globals, 'red'), #000, 90%),
+    'error-alt': color.mix(map.get($j-globals, 'red'), #000, 90%),
     'warning': map.get($j-globals, 'yellow'),
-    'warning-alt': mix(map.get($j-globals, 'yellow'), #000, 90%),
+    'warning-alt': color.mix(map.get($j-globals, 'yellow'), #000, 90%),
     'success': map.get($j-globals, 'green'),
-    'success-alt': mix(map.get($j-globals, 'green'), #000, 90%),
+    'success-alt': color.mix(map.get($j-globals, 'green'), #000, 90%),
     'bg': map.get($j-globals, 'grey-50'),
     'bg1': map.get($j-globals, 'grey-75'),
     'bg2': map.get($j-globals, 'grey-100'),
@@ -60,15 +61,15 @@ $tokens: (
   'j-dark': (
     'font-family': map.get($j-globals, 'font-family'),
     'accent': map.get($j-globals, 'accent'),
-    'accent-alt': mix(map.get($j-globals, 'accent'), #fff, 90%),
+    'accent-alt': color.mix(map.get($j-globals, 'accent'), #fff, 90%),
     'info': map.get($j-globals, 'blue'),
-    'info-alt': mix(map.get($j-globals, 'blue'), #fff, 90%),
+    'info-alt': color.mix(map.get($j-globals, 'blue'), #fff, 90%),
     'error': map.get($j-globals, 'red'),
-    'error-alt': mix(map.get($j-globals, 'red'), #fff, 90%),
+    'error-alt': color.mix(map.get($j-globals, 'red'), #fff, 90%),
     'warning': map.get($j-globals, 'yellow'),
-    'warning-alt': mix(map.get($j-globals, 'yellow'), #fff, 90%),
+    'warning-alt': color.mix(map.get($j-globals, 'yellow'), #fff, 90%),
     'success': map.get($j-globals, 'green'),
-    'success-alt': mix(map.get($j-globals, 'green'), #fff, 90%),
+    'success-alt': color.mix(map.get($j-globals, 'green'), #fff, 90%),
     'bg': map.get($j-globals, 'grey-900'),
     'bg1': map.get($j-globals, 'grey-800'),
     'bg2': map.get($j-globals, 'grey-700'),
@@ -89,7 +90,7 @@ $tokens: (
   $index: string.index($string, $search);
 
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace +
+    @return string.slice($string, 1, $index - 1) + $replace +
       str-replace(
         string.slice($string, $index + string.length($search)),
         $search,
@@ -102,7 +103,7 @@ $tokens: (
 
 @each $theme, $map in $tokens {
   // If using default built-in tokens, then include global tokens as CSS properties
-  @if str-index($theme, 'j-') {
+  @if string.index($theme, 'j-') {
     @if str-replace($theme, 'j-', '') == 'default' {
       :root {
         @each $key, $value in $j-globals {

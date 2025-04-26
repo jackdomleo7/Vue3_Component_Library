@@ -62,13 +62,7 @@
     "vitest": "^3.0.2"
   },
   "peerDependencies": {
-    "vue": "3",
-    "vue-router": "*"
-  },
-  "peerDependenciesMeta": {
-    "vue-router": {
-      "optional": true
-    }
+    "vue": "3"
   },
   "engines": {
     "node": ">=18"

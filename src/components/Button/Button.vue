@@ -14,7 +14,8 @@
         ? outline
           ? {
               '--j-btn-color': `var(--j-${status})`,
-              '--j-btn-border-color': `var(--j-${status})`
+              '--j-btn-border-color': `var(--j-${status})`,
+              '--j-btn-hover-border-color': `var(--j-${status}-alt)`,
             }
           : {
               '--j-btn-color': '#fff',
@@ -95,6 +96,7 @@ const defaultSlotContent = computed<string>(() => {
   --j-btn-border-color: transparent;
   --j-btn-color: var(--j-primary);
   --j-btn-hover-background-color: var(--j-bg1);
+  --j-btn-hover-border-color: var(--j-bg1);
   --j-btn-height: calc(var(--j-btn-font-size) * 2.5);
 
   background-color: var(--j-btn-background-color);

@@ -264,6 +264,21 @@ describe('TextInput', () => {
     });
   });
 
+  it('renders a required input', () => {
+    // Arrange
+    const wrapper = shallowMount(JTextInput, {
+      props: {
+        id: 'test-id',
+      },
+      attrs: {
+        required: 'true'
+      }
+    });
+
+    // Assert
+    expect(wrapper.find('label').text()).toContain('* (required)');
+  });
+
   it('renders an error message', () => {
     // Arrange
     const wrapper = shallowMount(JTextInput, {

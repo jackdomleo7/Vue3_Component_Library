@@ -1,4 +1,4 @@
-import{j as e,M as o,T as c}from"./index-cxDLX-ur.js";import{useMDXComponents as t}from"./index-CqgerLtJ.js";import"./iframe-pI3kEG9O.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CDuLr8kb.js";import"./index-DrFu-skq.js";function l(n){const s={code:"code",h2:"h2",li:"li",p:"p",pre:"pre",ul:"ul",...t(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{title:"Docs/SCSS Modules"}),`
+import{j as e,M as o,T as c}from"./index-DpQMYWrz.js";import{useMDXComponents as t}from"./index-0DplEYMu.js";import"./iframe-DMZ5kjTj.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CDuLr8kb.js";import"./index-DrFu-skq.js";function l(n){const s={code:"code",h2:"h2",li:"li",p:"p",pre:"pre",ul:"ul",...t(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(o,{title:"Docs/SCSS Modules"}),`
 `,e.jsx(c,{children:"SCSS Modules"}),`
 `,e.jsxs(s.p,{children:["This library comes with a set of SCSS modules that you can ",e.jsx(s.code,{children:"@use"})," into your project. These do not come bundled as default, they need to be imported manually."]}),`
 `,e.jsx(s.h2,{id:"_sr-onlyscss",children:e.jsx(s.code,{children:"_sr-only.scss"})}),`

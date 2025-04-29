@@ -1,0 +1,209 @@
+import { Meta, Title, Story, Source } from '@storybook/blocks';
+import * as TextInputStories from './TextInput.stories';
+
+<Meta title="Components/TextInput" of={TextInputStories} />
+
+<Title>TextInput</Title>
+
+```ts
+import TextInput from '@jackdomleo7/vue3-library/components/TextInput/TextInput.vue';
+```
+
+## `v-model`
+
+You can bind any string value to the `v-model` prop. This is a two-way binding, so any changes to the input will update the bound value, and vice versa.
+
+```ts
+import { ref } from 'vue';
+
+const value = ref('');
+```
+
+```html
+<TextInput v-model="value" />
+```
+
+## Props
+
+### Root Class
+
+- Prop: `rootClass`
+- Type: `string`
+- Default: `undefined`
+
+Classes to add directly to the root element's `class` attribute.
+
+### Root Style
+
+- Prop: `rootStyle`
+- Type: `string`
+- Default: `undefined`
+
+Styles to add directly to the root element's `style` attribute.
+
+### ID
+
+- Prop: `id`
+- Type: `string`
+- Required: `true`
+
+The `id` of the `<input/>` and the `for` of the `<label/>` element. This may also be used in various ARIA attributes.
+
+### Type
+
+- Prop: `type`
+- Type: `"text"|"email"|"tel"|"url"|"password"|"search"`
+- Default: `"text"`
+- Extends: [`<input type />`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types)
+
+The type of the `<input/>` element. This component restricts the type to those that are string-based (excluding dates).
+
+`type="text"`
+<Story of={TextInputStories.TypeText} />
+<br/>
+`type="email"`
+<Story of={TextInputStories.TypeEmail} />
+<br/>
+`type="url"`
+<Story of={TextInputStories.TypeUrl} />
+<br/>
+`type="tel"`
+<Story of={TextInputStories.TypeTel} />
+<br/>
+`type="password"`
+<Story of={TextInputStories.TypePassword} />
+<br/>
+`type="search"`
+<Story of={TextInputStories.TypeSearch} />
+
+### Status
+
+- Prop: `status`
+- Type: `"error"|"success"`
+- Default: `undefined`
+
+The validation status of the input.
+
+<Story of={TextInputStories.StatusSuccess} />
+<br/>
+<Story of={TextInputStories.StatusError} />
+
+### Hidden Label
+
+- Prop: `hiddenLabel`
+- Type: `boolean`
+- Default: `false`
+
+If you want to hide the label, you will still need to set a label (for accessibility), but you can then set this prop to `true` to hide the label visually.
+
+Only to be used where the context of its use is clear.
+
+<Story of={TextInputStories.HiddenLabel} />
+
+### Character Count
+
+- Prop: `characterCount`
+- Type: `"ascending"|"descending"`
+- Default: `undefined`
+
+Whether to show the character count.
+
+When `characterCount="ascending"`, the character count will be an incremental counter that counts up from 0.
+
+<Story of={TextInputStories.CharacterCountAscendingNoLimit} />
+<br/>
+
+When `characterCount="ascending"` **and** a `maxlength` value has been set, the character count will be shown as `0/{maxlength}` up to the `maxlength` value.
+
+<Story of={TextInputStories.CharacterCountAscending} />
+<br/>
+
+When `characterCount="descending"` **and** a `maxlength` value has been set, the character count will be shown as `{maxlength} characters remaining` down to `0`.
+
+<Story of={TextInputStories.CharacterCountDescending} />
+<br/>
+
+When `characterCount="descending"` **without** a `maxlength` value, no counter will show because there is no limit to count down from.
+
+### Fallthrough Attributes
+
+Any non-prop attributes and any event listeners will fallthrough to the `<input/>` element. This means you can use any native HTML attributes that are valid for an `<input/>` element with the `type` specified. Below are just some examples.
+
+#### Disabled
+
+```html
+<TextInput disabled />
+```
+
+<Story of={TextInputStories.Disabled} />
+<br/>
+
+#### Readonly
+
+```html
+<TextInput readonly />
+```
+
+<Story of={TextInputStories.Readonly} />
+<br/>
+
+#### Required
+
+```html
+<TextInput required />
+```
+
+<Story of={TextInputStories.Required} />
+<br/>
+
+#### Minlength
+
+```html
+<TextInput minlength />
+```
+
+<Story of={TextInputStories.Minlength} />
+<br/>
+
+#### Maxlength
+
+```html
+<TextInput maxlength />
+```
+
+<Story of={TextInputStories.Maxlength} />
+
+## Slots
+
+### Error
+
+- Slot: `error`
+
+Recommended to use with `status="error"`.
+
+Single error.
+
+<Story of={TextInputStories.SingleError} />
+<br/>
+
+Multiple errors.
+
+<Story of={TextInputStories.MultipleErrors} />
+
+### Description
+
+- Slot: `description`
+
+<Story of={TextInputStories.WithDescription} />
+
+## Behaviour
+
+### Width
+
+This component will take up the full width of the parent component by default. You can use the `rootClass` or `rootStyle` props to set a custom width.
+
+## Accessibility
+
+This component uses native HTML behaviour for `<input />` elements. This means that it will be keyboard navigable and screen reader friendly out of the box.
+
+`aria-describedby` is added to the `<input />` element when the `description` and/or the `error` slots are used to associate this content with the input.

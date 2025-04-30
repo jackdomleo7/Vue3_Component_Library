@@ -45,6 +45,13 @@ const meta: Meta<ComponentPropsAndSlots<typeof TextInput> & FallthroughAttrs> = 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const Default: Story = {
+  args: {
+    id: 'default',
+    label: 'Label'
+  }
+};
+
 export const TypeText: Story = {
   args: {
     id: 'type-text',

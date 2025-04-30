@@ -9,6 +9,8 @@ import * as TextInputStories from './TextInput.stories';
 import TextInput from '@jackdomleo7/vue3-library/components/TextInput/TextInput.vue';
 ```
 
+<Story of={TextInputStories.TypeText} />
+
 ## `v-model`
 
 You can bind any string value to the `v-model` prop. This is a two-way binding, so any changes to the input will update the bound value, and vice versa.
@@ -16,7 +18,7 @@ You can bind any string value to the `v-model` prop. This is a two-way binding, 
 ```ts
 import { ref } from 'vue';
 
-const value = ref('');
+const value = ref<string>('');
 ```
 
 ```html

@@ -12,7 +12,8 @@
         :type="type"
         :value="modelValue"
         :aria-invalid="status === 'error' ? 'true' : status === 'success' ? 'false' : undefined"
-        :aria-describedby="[$slots.error ? `${id}-error` : '', $slots.description ? `${id}-description` : ''].filter(Boolean).join(' ') || undefined"
+        :aria-errormessage="$slots.error ? `${id}-error` : undefined"
+        :aria-describedby="$slots.description ? `${id}-description` : undefined"
         @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       />
       <span v-if="status" class="j-textinput__validation-icon" aria-hidden="true"><template v-if="status === 'error'">✘</template><template v-if="status === 'success'">✔</template></span>

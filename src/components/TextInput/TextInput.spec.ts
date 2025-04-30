@@ -293,7 +293,7 @@ describe('TextInput', () => {
     // Assert
     expect(wrapper.find('.j-textinput__error').exists()).toBe(true);
     expect(wrapper.find('.j-textinput__error').html()).toContain('This is an error message');
-    expect(wrapper.find('input').attributes('aria-describedby')).toContain('test-id-error');
+    expect(wrapper.find('input').attributes('aria-errormessage')).toContain('test-id-error');
   });
 
   it('renders a description message', () => {

@@ -1,12 +1,14 @@
-import{j as e,M as l,T as d,S as s}from"./index-CdWCCAfU.js";import{useMDXComponents as t}from"./index-mtjuMNx3.js";import{T as c,a as h,b as o,c as a,d as x,e as j,f as u,S as p,g as m,H as g,C as f,h as y,i as b,D as T,R as w,j as v,M as C,k as S,l as D,m as M,W as I,n as R}from"./TextInput.stories-CNZbCThf.js";import"./iframe-CkuGVxi7.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CDuLr8kb.js";import"./index-DrFu-skq.js";import"./vue.esm-bundler-C4zPe_8p.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";function r(i){const n={a:"a",code:"code",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...t(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(l,{title:"Components/TextInput",of:c}),`
-`,e.jsx(d,{children:"TextInput"}),`
+import{j as e,M as d,T as c,S as s}from"./index-BpftePvR.js";import{useMDXComponents as l}from"./index-BfswRw2K.js";import{T as h,a as r,b as o,c as a,d as x,e as j,f as u,S as p,g as m,H as g,C as f,h as b,i as y,D as T,R as w,j as v,M as C,k as S,l as D,m as M,W as I,n as R}from"./TextInput.stories-CKUuFovC.js";import"./iframe-Cx5srZ20.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CDuLr8kb.js";import"./index-DrFu-skq.js";import"./vue.esm-bundler-D37E-MbO.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";function t(i){const n={a:"a",code:"code",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(d,{title:"Components/TextInput",of:h}),`
+`,e.jsx(c,{children:"TextInput"}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-ts",children:`import TextInput from '@jackdomleo7/vue3-library/components/TextInput/TextInput.vue';
 `})}),`
+`,e.jsx(s,{of:r}),`
+`,e.jsx("br",{}),`
 `,e.jsx(n.h2,{id:"v-model",children:e.jsx(n.code,{children:"v-model"})}),`
 `,e.jsxs(n.p,{children:["You can bind any string value to the ",e.jsx(n.code,{children:"v-model"})," prop. This is a two-way binding, so any changes to the input will update the bound value, and vice versa."]}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-ts",children:`import { ref } from 'vue';
 
-const value = ref('');
+const value = ref<string>('');
 `})}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-html",children:`<TextInput v-model="value" />
 `})}),`
@@ -41,7 +43,7 @@ const value = ref('');
 `]}),`
 `,e.jsxs(n.p,{children:["The type of the ",e.jsx(n.code,{children:"<input/>"})," element. This component restricts the type to those that are string-based (excluding dates)."]}),`
 `,e.jsx(n.p,{children:e.jsx(n.code,{children:'type="text"'})}),`
-`,e.jsx(s,{of:h}),`
+`,e.jsx(s,{of:r}),`
 `,e.jsx("br",{}),`
 `,e.jsx(n.p,{children:e.jsx(n.code,{children:'type="email"'})}),`
 `,e.jsx(s,{of:o}),`
@@ -87,10 +89,10 @@ const value = ref('');
 `,e.jsx(s,{of:f}),`
 `,e.jsx("br",{}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="ascending"'})," ",e.jsx(n.strong,{children:"and"})," a ",e.jsx(n.code,{children:"maxlength"})," value has been set, the character count will be shown as ",e.jsx(n.code,{children:"0/{maxlength}"})," up to the ",e.jsx(n.code,{children:"maxlength"})," value."]}),`
-`,e.jsx(s,{of:y}),`
+`,e.jsx(s,{of:b}),`
 `,e.jsx("br",{}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="descending"'})," ",e.jsx(n.strong,{children:"and"})," a ",e.jsx(n.code,{children:"maxlength"})," value has been set, the character count will be shown as ",e.jsx(n.code,{children:"{maxlength} characters remaining"})," down to ",e.jsx(n.code,{children:"0"}),"."]}),`
-`,e.jsx(s,{of:b}),`
+`,e.jsx(s,{of:y}),`
 `,e.jsx("br",{}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="descending"'})," ",e.jsx(n.strong,{children:"without"})," a ",e.jsx(n.code,{children:"maxlength"})," value, no counter will show because there is no limit to count down from."]}),`
 `,e.jsx(n.h3,{id:"fallthrough-attributes",children:"Fallthrough Attributes"}),`
@@ -111,12 +113,12 @@ const value = ref('');
 `,e.jsx(s,{of:v}),`
 `,e.jsx("br",{}),`
 `,e.jsx(n.h4,{id:"minlength",children:"Minlength"}),`
-`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-html",children:`<TextInput minlength />
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-html",children:`<TextInput minlength="5" />
 `})}),`
 `,e.jsx(s,{of:C}),`
 `,e.jsx("br",{}),`
 `,e.jsx(n.h4,{id:"maxlength",children:"Maxlength"}),`
-`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-html",children:`<TextInput maxlength />
+`,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-html",children:`<TextInput maxlength="5" />
 `})}),`
 `,e.jsx(s,{of:S}),`
 `,e.jsx(n.h2,{id:"slots",children:"Slots"}),`
@@ -149,4 +151,4 @@ const value = ref('');
 `,e.jsxs(n.p,{children:["This component uses native HTML behaviour for ",e.jsx(n.code,{children:"<input />"})," elements. This means that it will be keyboard navigable and screen reader friendly out of the box."]}),`
 `,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-invalid"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"status"})," prop is set. This will be set to ",e.jsx(n.code,{children:"true"})," when ",e.jsx(n.code,{children:'status="error"'})," and ",e.jsx(n.code,{children:"false"})," when ",e.jsx(n.code,{children:'status="success"'}),"."]}),`
 `,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-describedby"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"description"})," slot is used to associate this content with the input."]}),`
-`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-errormessage"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"error"})," slot is used to associate this content with the input."]})]})}function Y(i={}){const{wrapper:n}={...t(),...i.components};return n?e.jsx(n,{...i,children:e.jsx(r,{...i})}):r(i)}export{Y as default};
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-errormessage"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"error"})," slot is used to associate this content with the input."]})]})}function Y(i={}){const{wrapper:n}={...l(),...i.components};return n?e.jsx(n,{...i,children:e.jsx(t,{...i})}):t(i)}export{Y as default};

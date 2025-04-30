@@ -1,5 +1,5 @@
-import{j as e,M as d,T as t,S as s}from"./index-DpQMYWrz.js";import{useMDXComponents as l}from"./index-0DplEYMu.js";import{T as c,a as h,b as o,c as a,d as x,e as j,f as u,S as p,g as m,H as f,C as b,h as g,i as y,D as T,R as w,j as v,M as C,k as S,l as D,m as M,W as I}from"./TextInput.stories-CAF89V2a.js";import"./iframe-DMZ5kjTj.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CDuLr8kb.js";import"./index-DrFu-skq.js";import"./vue.esm-bundler-C4zPe_8p.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";function i(r){const n={a:"a",code:"code",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...l(),...r.components};return e.jsxs(e.Fragment,{children:[e.jsx(d,{title:"Components/TextInput",of:c}),`
-`,e.jsx(t,{children:"TextInput"}),`
+import{j as e,M as l,T as d,S as s}from"./index-CdWCCAfU.js";import{useMDXComponents as t}from"./index-mtjuMNx3.js";import{T as c,a as h,b as o,c as a,d as x,e as j,f as u,S as p,g as m,H as g,C as f,h as y,i as b,D as T,R as w,j as v,M as C,k as S,l as D,m as M,W as I,n as R}from"./TextInput.stories-CNZbCThf.js";import"./iframe-CkuGVxi7.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CDuLr8kb.js";import"./index-DrFu-skq.js";import"./vue.esm-bundler-C4zPe_8p.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";function r(i){const n={a:"a",code:"code",h2:"h2",h3:"h3",h4:"h4",li:"li",p:"p",pre:"pre",strong:"strong",ul:"ul",...t(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(l,{title:"Components/TextInput",of:c}),`
+`,e.jsx(d,{children:"TextInput"}),`
 `,e.jsx(n.pre,{children:e.jsx(n.code,{className:"language-ts",children:`import TextInput from '@jackdomleo7/vue3-library/components/TextInput/TextInput.vue';
 `})}),`
 `,e.jsx(n.h2,{id:"v-model",children:e.jsx(n.code,{children:"v-model"})}),`
@@ -75,7 +75,7 @@ const value = ref('');
 `]}),`
 `,e.jsxs(n.p,{children:["If you want to hide the label, you will still need to set a label (for accessibility), but you can then set this prop to ",e.jsx(n.code,{children:"true"})," to hide the label visually."]}),`
 `,e.jsx(n.p,{children:"Only to be used where the context of its use is clear."}),`
-`,e.jsx(s,{of:f}),`
+`,e.jsx(s,{of:g}),`
 `,e.jsx(n.h3,{id:"character-count",children:"Character Count"}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:["Prop: ",e.jsx(n.code,{children:"characterCount"})]}),`
@@ -84,13 +84,13 @@ const value = ref('');
 `]}),`
 `,e.jsx(n.p,{children:"Whether to show the character count."}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="ascending"'}),", the character count will be an incremental counter that counts up from 0."]}),`
-`,e.jsx(s,{of:b}),`
+`,e.jsx(s,{of:f}),`
 `,e.jsx("br",{}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="ascending"'})," ",e.jsx(n.strong,{children:"and"})," a ",e.jsx(n.code,{children:"maxlength"})," value has been set, the character count will be shown as ",e.jsx(n.code,{children:"0/{maxlength}"})," up to the ",e.jsx(n.code,{children:"maxlength"})," value."]}),`
-`,e.jsx(s,{of:g}),`
+`,e.jsx(s,{of:y}),`
 `,e.jsx("br",{}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="descending"'})," ",e.jsx(n.strong,{children:"and"})," a ",e.jsx(n.code,{children:"maxlength"})," value has been set, the character count will be shown as ",e.jsx(n.code,{children:"{maxlength} characters remaining"})," down to ",e.jsx(n.code,{children:"0"}),"."]}),`
-`,e.jsx(s,{of:y}),`
+`,e.jsx(s,{of:b}),`
 `,e.jsx("br",{}),`
 `,e.jsxs(n.p,{children:["When ",e.jsx(n.code,{children:'characterCount="descending"'})," ",e.jsx(n.strong,{children:"without"})," a ",e.jsx(n.code,{children:"maxlength"})," value, no counter will show because there is no limit to count down from."]}),`
 `,e.jsx(n.h3,{id:"fallthrough-attributes",children:"Fallthrough Attributes"}),`
@@ -135,9 +135,18 @@ const value = ref('');
 `,e.jsxs(n.li,{children:["Slot: ",e.jsx(n.code,{children:"description"})]}),`
 `]}),`
 `,e.jsx(s,{of:I}),`
+`,e.jsx(n.h2,{id:"customisation",children:"Customisation"}),`
+`,e.jsxs(n.p,{children:["You can customise the component using the ",e.jsx(n.code,{children:"rootClass"})," and ",e.jsx(n.code,{children:"rootStyle"})," props to apply top-level styles. You can also use the provided CSS variables to alter deep styles."]}),`
+`,e.jsxs(n.ul,{children:[`
+`,e.jsxs(n.li,{children:[e.jsx(n.code,{children:"--j-textinput-height"})," | ",e.jsx(n.strong,{children:"Type:"})," ",e.jsx(n.a,{href:"https://developer.mozilla.org/en-US/docs/Web/CSS/height",rel:"nofollow",children:e.jsx(n.code,{children:"height"})})," | ",e.jsx(n.strong,{children:"Default:"})," ",e.jsx(n.code,{children:"2.5rem"})," | The height of the input element."]}),`
+`]}),`
+`,e.jsx(s,{of:R}),`
 `,e.jsx(n.h2,{id:"behaviour",children:"Behaviour"}),`
 `,e.jsx(n.h3,{id:"width",children:"Width"}),`
 `,e.jsxs(n.p,{children:["This component will take up the full width of the parent component by default. You can use the ",e.jsx(n.code,{children:"rootClass"})," or ",e.jsx(n.code,{children:"rootStyle"})," props to set a custom width."]}),`
+`,e.jsxs(n.p,{children:["The minimum width is 1.5× the ",e.jsx(n.code,{children:"--j-textinput-height"})," variable."]}),`
 `,e.jsx(n.h2,{id:"accessibility",children:"Accessibility"}),`
 `,e.jsxs(n.p,{children:["This component uses native HTML behaviour for ",e.jsx(n.code,{children:"<input />"})," elements. This means that it will be keyboard navigable and screen reader friendly out of the box."]}),`
-`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-describedby"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"description"})," and/or the ",e.jsx(n.code,{children:"error"})," slots are used to associate this content with the input."]})]})}function k(r={}){const{wrapper:n}={...l(),...r.components};return n?e.jsx(n,{...r,children:e.jsx(i,{...r})}):i(r)}export{k as default};
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-invalid"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"status"})," prop is set. This will be set to ",e.jsx(n.code,{children:"true"})," when ",e.jsx(n.code,{children:'status="error"'})," and ",e.jsx(n.code,{children:"false"})," when ",e.jsx(n.code,{children:'status="success"'}),"."]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-describedby"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"description"})," slot is used to associate this content with the input."]}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"aria-errormessage"})," is added to the ",e.jsx(n.code,{children:"<input />"})," element when the ",e.jsx(n.code,{children:"error"})," slot is used to associate this content with the input."]})]})}function Y(i={}){const{wrapper:n}={...t(),...i.components};return n?e.jsx(n,{...i,children:e.jsx(r,{...i})}):r(i)}export{Y as default};

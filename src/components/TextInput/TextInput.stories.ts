@@ -208,3 +208,12 @@ export const WithDescription: Story = {
     description: '<p>Enter your <strong>full</strong> name</p>'
   }
 };
+
+export const Custom: Story = {
+  args: {
+    id: 'custom',
+    label: 'Label',
+    rootStyle: `
+      --j-textinput-height: 4rem;`
+  }
+};

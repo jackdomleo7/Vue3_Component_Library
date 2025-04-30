@@ -196,15 +196,27 @@ Multiple errors.
 
 <Story of={TextInputStories.WithDescription} />
 
+## Customisation
+
+You can customise the component using the `rootClass` and `rootStyle` props to apply top-level styles. You can also use the provided CSS variables to alter deep styles.
+
+- `--j-textinput-height` | **Type:** [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) | **Default:** `2.5rem` | The height of the input element.
+
+<Story of={TextInputStories.Custom} />
+
 ## Behaviour
 
 ### Width
 
 This component will take up the full width of the parent component by default. You can use the `rootClass` or `rootStyle` props to set a custom width.
 
+The minimum width is 1.5&times; the `--j-textinput-height` variable.
+
 ## Accessibility
 
 This component uses native HTML behaviour for `<input />` elements. This means that it will be keyboard navigable and screen reader friendly out of the box.
+
+`aria-invalid` is added to the `<input />` element when the `status` prop is set. This will be set to `true` when `status="error"` and `false` when `status="success"`.
 
 `aria-describedby` is added to the `<input />` element when the `description` slot is used to associate this content with the input.
 

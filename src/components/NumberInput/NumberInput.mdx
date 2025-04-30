@@ -1,0 +1,174 @@
+import { Meta, Title, Story, Source } from '@storybook/blocks';
+import * as NumberInputStories from './NumberInput.stories';
+
+<Meta title="Components/NumberInput" of={NumberInputStories} />
+
+<Title>NumberInput</Title>
+
+```ts
+import NumberInput from '@jackdomleo7/vue3-library/components/NumberInput/NumberInput.vue';
+```
+
+<Story of={NumberInputStories.Default} />
+<br/>
+
+## `v-model`
+
+You can bind any number value to the `v-model` prop. This is a two-way binding, so any changes to the input will update the bound value, and vice versa.
+
+```ts
+import { ref } from 'vue';
+
+const value = ref<number>(7);
+```
+
+```html
+<NumberInput v-model="value" />
+```
+
+## Props
+
+### Root Class
+
+- Prop: `rootClass`
+- Type: `string`
+- Default: `undefined`
+
+Classes to add directly to the root element's `class` attribute.
+
+### Root Style
+
+- Prop: `rootStyle`
+- Type: `string`
+- Default: `undefined`
+
+Styles to add directly to the root element's `style` attribute.
+
+### ID
+
+- Prop: `id`
+- Type: `string`
+- Required: `true`
+
+The `id` of the `<input/>` and the `for` of the `<label/>` element. This may also be used in various ARIA attributes.
+
+### Status
+
+- Prop: `status`
+- Type: `"error"|"success"`
+- Default: `undefined`
+
+The validation status of the input.
+
+<Story of={NumberInputStories.StatusSuccess} />
+<br/>
+<Story of={NumberInputStories.StatusError} />
+
+### Hidden Label
+
+- Prop: `hiddenLabel`
+- Type: `boolean`
+- Default: `false`
+
+If you want to hide the label, you will still need to set a label (for accessibility), but you can then set this prop to `true` to hide the label visually.
+
+Only to be used where the context of its use is clear.
+
+<Story of={NumberInputStories.HiddenLabel} />
+
+### Fallthrough Attributes
+
+Any non-prop attributes and any event listeners will fallthrough to the `<input/>` element. This means you can use any native HTML attributes that are valid for an `<input/>` element with the `type` specified. Below are just some examples.
+
+#### Disabled
+
+```html
+<NumberInput disabled />
+```
+
+<Story of={NumberInputStories.Disabled} />
+<br/>
+
+#### Readonly
+
+```html
+<NumberInput readonly />
+```
+
+<Story of={NumberInputStories.Readonly} />
+<br/>
+
+#### Required
+
+```html
+<NumberInput required />
+```
+
+<Story of={NumberInputStories.Required} />
+<br/>
+
+#### Minlength
+
+```html
+<NumberInput min="5" />
+```
+
+<Story of={NumberInputStories.Min} />
+<br/>
+
+#### Maxlength
+
+```html
+<NumberInput max="5" />
+```
+
+<Story of={NumberInputStories.Max} />
+
+## Slots
+
+### Error
+
+- Slot: `error`
+
+Recommended to use with `status="error"`.
+
+Single error.
+
+<Story of={NumberInputStories.SingleError} />
+<br/>
+
+Multiple errors.
+
+<Story of={NumberInputStories.MultipleErrors} />
+
+### Description
+
+- Slot: `description`
+
+<Story of={NumberInputStories.WithDescription} />
+
+## Customisation
+
+You can customise the component using the `rootClass` and `rootStyle` props to apply top-level styles. You can also use the provided CSS variables to alter deep styles.
+
+- `--j-numberinput-height` | **Type:** [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) | **Default:** `2.5rem` | The height of the input element.
+
+<Story of={NumberInputStories.Custom} />
+
+## Behaviour
+
+### Width
+
+This component will take up the full width of the parent component by default. You can use the `rootClass` or `rootStyle` props to set a custom width.
+
+The minimum width is 1.5&times; the `--j-numberinput-height` variable.
+
+## Accessibility
+
+This component uses native HTML behaviour for `<input type="number" />`. This means that it will be keyboard navigable and screen reader friendly out of the box.
+
+`aria-invalid` is added to the `<input />` element when the `status` prop is set. This will be set to `true` when `status="error"` and `false` when `status="success"`.
+
+`aria-describedby` is added to the `<input />` element when the `description` slot is used to associate this content with the input.
+
+`aria-errormessage` is added to the `<input />` element when the `error` slot is used to associate this content with the input.
